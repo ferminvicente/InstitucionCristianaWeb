@@ -1,0 +1,141 @@
+/* ========== NAVBAR PRINCIPAL ========== */
+.navbar {
+    padding: 0.5rem 1rem;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 15%, rgba(255,255,255,0.9) 85%, rgba(255,255,255,0) 100%) !important;
+    border-bottom: 7px solid #0F3968 !important;
+    backdrop-filter: blur(3px);
+    position: relative;
+    z-index: 1000;
+}
+
+    .navbar::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 100%;
+        height: 10px;
+        background: linear-gradient(to right, transparent 0%, #1D1F2F 15%, #1D1F2F 85%, transparent 100%);
+        z-index: -1;
+    }
+
+.navbar-brand {
+    width: 180px;
+    margin-left: 2.5rem !important;
+    transition: all 0.3s ease;
+}
+
+.navbar-logo {
+    width: 150%;
+    max-width: 320px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.1));
+}
+
+/* Menú Hamburguesa */
+.navbar-toggler {
+    border: 2px solid #0F3968;
+    order: 2; /* Posiciona a la derecha */
+    margin-left: auto !important;
+    z-index: 1001; /* Encima del logo */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%231D1F2F' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+    padding-right: 3rem;
+}
+
+.navbar-nav {
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.nav-link {
+    font-family: 'Garet', Arial, sans-serif !important;
+    color: #0F3968 !important;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    padding: 0.5rem 0 !important;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+    .nav-link:hover {
+        color: #E64F22 !important;
+        transform: translateX(5px);
+        text-shadow: 1px 1px 2px rgba(230, 79, 34, 0.2);
+    }
+
+    .nav-link::before {
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, #E64F22 0%, #0F3968 100%);
+        transition: width 0.4s ease;
+    }
+
+    .nav-link:hover::before {
+        width: 100%;
+    }
+
+/* ========== VERSIÓN MÓVIL ========== */
+@media (max-width: 992px) {
+    .navbar {
+        flex-wrap: nowrap;
+        padding: 0.5rem 1rem !important;
+    }
+
+    .navbar-brand {
+        margin-left: 0 !important;
+        max-width: 180px !important;
+        order: 1;
+    }
+
+    .navbar-toggler {
+        order: 2;
+        margin-right: 0.5rem !important;
+    }
+
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(255,255,255,0.98);
+        backdrop-filter: blur(10px);
+        padding: 1rem 2rem;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .navbar-nav {
+        gap: 0.8rem;
+        padding: 1rem 0;
+    }
+
+    .nav-link {
+        font-size: 0.9rem;
+        padding: 0.8rem !important;
+        text-align: center;
+        background: rgba(230,79,34,0.05);
+        border-radius: 8px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand {
+        max-width: 140px !important;
+    }
+
+    .navbar-toggler {
+        padding: 0.25rem 0.5rem;
+    }
+}

@@ -1,0 +1,181 @@
+﻿/* ========== ESTILOS AJUSTADOS - 2 COLUMNAS ========== */
+
+/* Contenedor Principal */
+.organigrama-container {
+    max-width: 1300px;
+    margin: 4rem auto;
+    padding: 30px 20px;
+    position: relative;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Cabecera */
+.organigrama-header {
+    text-align: center;
+    margin-bottom: 5rem;
+    padding: 2rem;
+    background: linear-gradient(45deg, #2D3255,#0F3968 );
+    border-radius: 15px;
+    color: white;
+}
+
+    .organigrama-header h1 {
+        font-size: 2.8rem;
+        margin-bottom: 1.2rem;
+        letter-spacing: 1px;
+    }
+
+    .organigrama-header h2 {
+        font-size: 2rem;
+        color: #FF6B35;
+        font-weight: 300;
+    }
+
+/* Estructura Jerárquica */
+.nivel {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    margin: 4rem 0;
+    gap: 3rem;
+}
+
+/* Tarjetas - Versión Corregida */
+.tarjeta-director {
+    background: linear-gradient(45deg, #2D3255,#0F3968 );
+    color: white;
+    padding: 3rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    position: relative;
+    z-index: 10;
+    max-width: 450px;
+    margin: 0 auto 6rem;
+    border: 3px solid #E64F22;
+}
+
+/*No mover*/
+.nivel.coordinador {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Cambiado a 2 columnas */
+    gap: 2.5rem;
+    padding: 2rem 0;
+    position: relative;
+    justify-items: center;
+    align-items: start;
+}
+
+.contenedor-jerarquico {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.tarjeta-coordinador {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    width: 100%;
+    min-height: 320px;
+    transition: all 0.3s ease;
+    border-top: 4px solid #E64F22;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Sistema responsivo mejorado */
+@media (max-width: 1200px) {
+    .nivel.coordinador {
+        gap: 2rem;
+        padding: 1rem 0;
+    }
+
+    .tarjeta-coordinador {
+        min-height: 300px;
+        padding: 1.2rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .nivel.coordinador {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+    }
+
+    .tarjeta-coordinador {
+        min-height: auto;
+        margin-bottom: 1.5rem;
+    }
+
+    .foto-circular {
+        width: 130px;
+        height: 130px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tarjeta-coordinador {
+        padding: 1rem;
+    }
+
+    .programas p {
+        padding-left: 1rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* Mantengo todos tus estilos específicos */
+.foto-circular {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 3px solid #E64F22;
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+
+.programas {
+    background: #f8fafb;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+    .programas p {
+        margin: 0.5rem 0;
+        font-size: 0.9rem;
+        text-align: left;
+        padding-left: 1.5rem;
+        position: relative;
+    }
+
+        .programas p::before {
+            content: "•";
+            color: #E64F22;
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+        }
+
+.tarjeta-coordinador:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.info-cargo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem 0;
+    width: 100%;
+}
