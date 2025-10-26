@@ -1,6 +1,347 @@
-﻿namespace InstitucionCristianaWeb.wwwroot.css.pages
-{
-    public class Home
-    {
+﻿/* === SLIDER === */
+.photo-slider {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.25);
+    background-color: #0F3968;
+}
+
+.slider-container {
+    width: 100%;
+    height: 640px;
+    position: relative;
+}
+
+.slides-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.9s ease-in-out;
+}
+
+.slide-item {
+    flex: 0 0 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0F3968;
+}
+
+    /* Para escritorio - cover para llenar sin espacios */
+    .slide-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Para web - llena el espacio */
+        display: block;
+    }
+
+.slider-title {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(15, 57, 104, 0.95);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border: 2px solid #E64F22;
+    border-radius: 10px;
+    padding: 12px 24px;
+    text-align: center;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.4);
+    z-index: 100;
+    white-space: nowrap;
+}
+
+/* Para móvil - contain para ver imagen completa */
+@media (max-width: 768px) {
+    .slider-container {
+        height: 350px;
+    }
+
+    .slide-item img {
+        object-fit: contain; /* Para móvil - imagen completa */
+    }
+
+    .slider-title {
+        font-size: 1rem;
+        padding: 10px 20px;
+        white-space: normal;
+    }
+}
+
+@media (max-width: 576px) {
+    .slider-container {
+        height: 280px;
+    }
+
+    .slider-title {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+        bottom: 15px;
+    }
+}
+
+/* ===== RESTO DE ESTILOS (sin cambios) ===== */
+.estadisticas-home {
+    background: #f8f9fa;
+    padding: 80px 0;
+    font-family: 'Garet', Arial, sans-serif;
+}
+
+.estadistica-item {
+    text-align: center;
+    padding: 2rem;
+    font-family: 'Garet', Arial, sans-serif;
+}
+
+.estadistica-numero {
+    font-size: 3.5rem;
+    color: #E64F22;
+    font-weight: 800;
+    display: block;
+    font-family: 'Garet', Arial, sans-serif;
+    margin-bottom: 0.5rem;
+}
+
+.estadistica-texto {
+    color: #0F3968;
+    font-size: 1.2rem;
+    margin: 0;
+    font-family: 'Garet', Arial, sans-serif;
+    font-weight: 600;
+}
+
+.mision-vision-home {
+    padding: 80px 0;
+    font-family: 'Garet', Arial, sans-serif;
+}
+
+.card-mision {
+    background: linear-gradient(135deg, #E64F22 0%, #FF6B35 100%);
+    color: #ffffff;
+    padding: 3rem;
+    border-radius: 15px;
+    height: 100%;
+    box-shadow: 0 8px 25px rgba(230, 79, 34, 0.3);
+    font-family: 'Garet', Arial, sans-serif;
+}
+
+.card-vision {
+    background: linear-gradient(135deg, #0F3968 0%, #2D3255 100%);
+    color: #ffffff;
+    padding: 3rem;
+    border-radius: 15px;
+    height: 100%;
+    box-shadow: 0 8px 25px rgba(15, 57, 104, 0.3);
+    font-family: 'Garet', Arial, sans-serif;
+}
+
+    .card-mision h2,
+    .card-vision h2 {
+        font-size: 2.2rem;
+        margin-bottom: 1.5rem;
+        color: #ffffff;
+        font-family: 'Garet', Arial, sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .card-mision p,
+    .card-vision p {
+        font-size: 1.2rem;
+        line-height: 1.7;
+        margin: 0;
+        color: #ffffff;
+        font-family: 'Garet', Arial, sans-serif;
+        font-weight: 400;
+    }
+
+/* === AGREGAR ESTO EN LA SECCIÓN RESPONSIVE === */
+
+@media (max-width: 768px) {
+    /* Espacio entre tarjetas Misión y Visión en móvil */
+    .mision-vision-home .row {
+        gap: 2rem; /* Espacio entre las tarjetas */
+    }
+
+    .mision-vision-home .col-md-6 {
+        margin-bottom: 2rem; /* Espacio inferior adicional */
+    }
+
+    .card-mision,
+    .card-vision {
+        margin-bottom: 1rem; /* Espacio interno */
+    }
+
+    /* También puedes usar esto como alternativa: */
+    /*
+    .mision-vision-home .col-md-6:first-child {
+        margin-bottom: 2rem;
+    }
+    */
+}
+
+/* O si prefieres un enfoque más específico: */
+@media (max-width: 768px) {
+    .mision-vision-home .row > [class*="col-"] {
+        margin-bottom: 2rem;
+    }
+
+        .mision-vision-home .row > [class*="col-"]:last-child {
+            margin-bottom: 0;
+        }
+}.valores-home {
+    background: #f8f9fa;
+    padding: 80px 0;
+    font-family: 'Garet', Arial, sans-serif;
+}
+
+.titulo-seccion {
+    text-align: center;
+    font-size: 2.8rem;
+    color: #0F3968;
+    margin-bottom: 3rem;
+    font-weight: 700;
+    font-family: 'Garet', Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card-valor {
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 2rem;
+    box-shadow: 0 5px 20px rgba(15, 57, 104, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid transparent;
+    font-family: 'Garet', Arial, sans-serif;
+}
+
+    .card-valor:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 35px rgba(15, 57, 104, 0.15);
+        border-color: #E64F22;
+    }
+
+.icono-valor {
+    font-size: 3.5rem;
+    color: #E64F22;
+    margin-bottom: 1.5rem;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.card-valor:hover .icono-valor {
+    transform: scale(1.1);
+}
+
+.card-valor h3 {
+    color: #0F3968;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    font-family: 'Garet', Arial, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.card-valor p {
+    color: #6c757d;
+    line-height: 1.7;
+    margin: 0;
+    font-family: 'Garet', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+
+.compromiso-home {
+    padding: 80px 0;
+    font-family: 'Garet', Arial, sans-serif;
+}
+
+.lista-compromiso {
+    list-style: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Garet', Arial, sans-serif;
+}
+
+.item-compromiso {
+    padding: 1.2rem 0;
+    border-bottom: 2px solid #e9ecef;
+    font-size: 1.3rem;
+    color: #0F3968;
+    font-family: 'Garet', Arial, sans-serif;
+    font-weight: 500;
+    position: relative;
+    padding-left: 3rem;
+    transition: all 0.3s ease;
+}
+
+    .item-compromiso:hover {
+        color: #E64F22;
+        transform: translateX(10px);
+    }
+
+    .item-compromiso:before {
+        content: "✓";
+        color: #E64F22;
+        font-weight: bold;
+        margin-right: 1rem;
+        position: absolute;
+        left: 0;
+        font-size: 1.5rem;
+    }
+
+@media (max-width: 768px) {
+    .estadistica-numero {
+        font-size: 2.5rem;
+    }
+
+    .estadistica-texto {
+        font-size: 1.1rem;
+    }
+
+    .card-mision,
+    .card-vision {
+        padding: 2rem;
+        margin-bottom: 2rem;
+    }
+
+        .card-mision h2,
+        .card-vision h2 {
+            font-size: 1.8rem;
+        }
+
+    .titulo-seccion {
+        font-size: 2.2rem;
+    }
+
+    .card-valor {
+        padding: 2rem;
+    }
+
+    .item-compromiso {
+        font-size: 1.1rem;
+        padding-left: 2.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .estadistica-numero {
+        font-size: 2rem;
+    }
+
+    .titulo-seccion {
+        font-size: 1.8rem;
     }
 }

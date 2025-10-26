@@ -7,7 +7,7 @@ namespace InstitucionCristianaWeb.Controllers
     {
         public IActionResult Nosotros()
         {
-            return View(); // Debe buscar Views/Nosotros/Index.cshtml
+            return View(); 
         }
     }
 }
