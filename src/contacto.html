@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Institución Cristiana</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="./css/Styles - Main.css">
+    <link rel="stylesheet" href="./css/components/Styles - Navbar.css">
+    <link rel="stylesheet" href="./css/components/Styles - Footer.css">
+    <style>
+        .hero-contacto {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/img/SlidefotosHome/10.jpg') center/cover;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-info-item {
+            transition: transform 0.3s;
+        }
+
+        .contact-info-item:hover {
+            transform: translateX(10px);
+        }
+
+        .map-container {
+            height: 400px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="./index.html">
+                <img src="./img/logo - horizontal.png" alt="Logo Ministerio" class="navbar-logo">
+            </a>
+
+            <!-- Botón Hamburguesa -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Elementos del Menú -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./programas.html">Programas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./biblioteca.html">Biblioteca</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div> 
+        </div>
+    </nav>
+
+    <!-- Hero Contacto -->
+    <header class="hero-contacto text-white text-center">
+        <div class="container">
+            <h1 class="display-3 fw-bold mb-3">Contáctanos</h1>
+            <p class="lead">Estamos aquí para resolver tus dudas y acompañarte en tu formación</p>
+        </div>
+    </header>
+
+    <!-- Sección de Contacto -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Formulario -->
+                <div class="col-md-6">
+                    <h2 class="mb-4">Envíanos un mensaje</h2>
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre completo</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre" required>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">Correo electrónico</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="telefono" class="form-label">Teléfono</label>
+                                <input type="tel" class="form-control" id="telefono" name="telefono" pattern="[0-9]{8,10}">
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="asunto" class="form-label">Asunto</label>
+                            <select class="form-select" id="asunto" name="asunto" required>
+                                <option value="">Seleccione un asunto</option>
+                                <option>Admisiones</option>
+                                <option>Información académica</option>
+                                <option>Eventos</option>
+                                <option>Otro</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="mensaje" name="mensaje" rows="5" required></textarea>
+                        </div>
+
+                        <!-- Campo honeypot para protección contra bots -->
+                        <div class="d-none">
+                            <input type="text" name="honeypot" id="honeypot">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary px-4 py-2" style="border-radius: 8px;">
+                            <i class="fas fa-paper-plane me-2"></i>Enviar mensaje
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Información de Contacto -->
+                <div class="col-md-6">
+                    <div class="mb-5">
+                        <h2 class="mb-4">Información de contacto</h2>
+                        <div class="contact-info-item mb-4">
+                            <div class="d-flex align-items-center">
+                                <div class="icon-circle bg-primary text-white me-3" style="width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h5>Dirección</h5>
+                                    <p class="mb-0">Av. Bolívar Esq. Leopoldo Navarro, Santo Domingo</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item mb-4">
+                            <div class="d-flex align-items-center">
+                                <div class="icon-circle bg-success text-white me-3" style="width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h5>Teléfonos</h5>
+                                    <p class="mb-0">
+                                        Oficinas: (809) 123-4567
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item mb-4">
+                            <div class="d-flex align-items-center">
+                                <div class="icon-circle bg-info text-white me-3" style="width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h5>Correos electrónicos</h5>
+                                    <p class="mb-0">
+                                        General: info@mineduc.gob.do
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mapa -->
+                    <div class="map-container mb-4">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15050.551921224216!2d-99.1353794!3d19.4326292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f92b75aa014d%3A0x17e617c1a85a0413!2sZ%C3%B3calo%20de%20la%20Ciudad%20de%20M%C3%A9xico!5e0!3m2!1ses!2smx!4v1716856754874!5m2!1ses!2smx"
+                                width="100%"
+                                height="100%"
+                                style="border:0;"
+                                allowfullscreen=""
+                                loading="lazy"
+                                title="Mapa de ubicación">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <!-- Sección de Logo -->
+            <a class="footer-section logo-section">
+                <img src="./img/logo - vertical.png" alt="Logo Ministerio" class="footer-logo">
+            </a>  
+            <!-- Sección de Contacto -->
+            <div class="footer-section contact-section">
+                <h2 class="footer-heading">CONTACTO</h2>
+                <ul class="contact-list">
+                    <li class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Av. Báez Osorio Leopoldo Navarro, Santo Domingo
+                    </li>
+                    <li class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        (809) 123-4567
+                    </li>
+                    <li class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        info@mineduc.gob.do
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Línea divisoria -->
+            <div class="footer-divider"></div>
+
+            <!-- Sección Redes Sociales -->
+            <div class="footer-section social-section">
+                <h2 class="footer-heading">SÍGUENOS</h2>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/educacionadrd?igsh=cm1ucXV3czN0aHY3" class="social-icon" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@EDUCACIONADRD" class="social-icon" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://open.spotify.com/episode/2ywMb45l1HWVa13kTzxzA9?si=7ni3a-VCQXW1KiCeNUGvEg" class="social-icon" target="_blank">
+                        <i class="fab fa-spotify"></i>
+                    </a>
+                    <a href="https://whatsapp.com/channel/0029Vb677MK8vd1YRM9qdo0R" class="social-icon" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Sección Derechos -->
+            <div class="footer-section copyright-section">
+                <p class="copyright-text">
+                    © 2025 Ministerio de Educación A.D<br>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Validación del honeypot
+            if(document.getElementById('honeypot').value !== '') {
+                return;
+            }
+
+            // Simulación de envío exitoso
+            alert('Mensaje enviado correctamente. Nos pondremos en contacto pronto.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

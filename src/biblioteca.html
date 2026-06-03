@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Digital - Ministerio de Educación</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="./css/Styles - Main.css">
+    <link rel="stylesheet" href="./css/components/Styles - Navbar.css">
+    <link rel="stylesheet" href="./css/components/Styles - Footer.css">
+    <link rel="stylesheet" href="./css/pages/Styles - Biblioteca.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="./index.html">
+                <img src="./img/logo - horizontal.png" alt="Logo Ministerio" class="navbar-logo">
+            </a>
+
+            <!-- Botón Hamburguesa -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Elementos del Menú -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./programas.html">Programas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./biblioteca.html">Biblioteca</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div> 
+        </div>
+    </nav>
+
+    <!-- Contenido de las vistas -->
+    <main>
+        <section class="biblioteca-hero">
+            <div class="container">
+                <h1>Biblioteca Digital</h1>
+                <p class="hero-subtitle">Explora nuestra colección de recursos educativos y espirituales</p>
+            </div>
+        </section>
+
+        <!-- Google Drive Shared Folder Call-out Card -->
+        <section class="container mt-5">
+            <div class="card border-primary shadow-sm" style="border-style: dashed; border-width: 2px; background: linear-gradient(135deg, rgba(27, 110, 194, 0.05) 0%, rgba(255, 255, 255, 0.9) 100%);">
+                <div class="card-body text-center p-5">
+                    <div class="display-3 text-primary mb-3">
+                        <i class="fas fa-cloud-download-alt"></i>
+                    </div>
+                    <h2 class="card-title h3 mb-3 text-dark">Biblioteca y Recursos Cristianos en Google Drive</h2>
+                    <p class="card-text text-muted mx-auto" style="max-width: 600px; font-size: 1.05rem;">
+                        Accede de manera directa a nuestra carpeta pública de **Google Drive** donde compartimos manuales de estudio, libros de teología, planes de lectura bíblica y material didáctico. El material está organizado por carpetas listo para ver o descargar gratis.
+                    </p>
+                    <a href="https://drive.google.com/drive/folders/tu-carpeta-compartida" target="_blank" class="btn btn-primary btn-lg px-5 py-3 mt-3 shadow" id="google-drive-library-btn" style="font-weight: 600; border-radius: 8px;">
+                        <i class="fab fa-google-drive me-2"></i>Abrir Biblioteca en Google Drive ↗
+                    </a>
+                    <div class="text-muted mt-3 small">
+                        *Nota: Serás redirigido a una carpeta pública de Google Drive en una nueva pestaña. No requiere registro.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="categorias-biblioteca">
+            <div class="container">
+                <h2 class="titulo-seccion">Categorías de Recursos</h2>
+                
+                <!-- Contenedor del slider CORREGIDO -->
+                <div class="categorias-slider-container">
+                    <div class="categorias-slider">
+                        <!-- Tarjeta 1 - Teología -->
+                        <div class="categoria-card">
+                            <div class="categoria-icono">
+                                <i class="fas fa-bible"></i>
+                            </div>
+                            <h3>Teología</h3>
+                            <p>Estudios bíblicos, doctrina cristiana, comentarios y recursos teológicos profundos.</p>
+                            <div class="categoria-stats">
+                                <span class="stat">250+ Libros</span>
+                                <span class="stat">50 Estudios</span>
+                            </div>
+                            <button class="btn-explorar">Explorar Colección</button>
+                        </div>
+
+                        <!-- Tarjeta 2 - Autoayuda -->
+                        <div class="categoria-card">
+                            <div class="categoria-icono">
+                                <i class="fas fa-hands-helping"></i>
+                            </div>
+                            <h3>Crecimiento Personal</h3>
+                            <p>Recursos para desarrollo personal, liderazgo y crecimiento espiritual práctico.</p>
+                            <div class="categoria-stats">
+                                <span class="stat">180+ Recursos</span>
+                                <span class="stat">30 Guías</span>
+                            </div>
+                            <button class="btn-explorar">Explorar Colección</button>
+                        </div>
+
+                        <!-- Tarjeta 3 - Educación -->
+                        <div class="categoria-card">
+                            <div class="categoria-icono">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h3>Educación Cristiana</h3>
+                            <p>Material pedagógico, currículos educativos y recursos para enseñanza cristiana.</p>
+                            <div class="categoria-stats">
+                                <span class="stat">120+ Materiales</span>
+                                <span class="stat">25 Planes</span>
+                            </div>
+                            <button class="btn-explorar">Explorar Colección</button>
+                        </div>
+
+                        <!-- Tarjeta 4 - Familia -->
+                        <div class="categoria-card">
+                            <div class="categoria-icono">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <h3>Familia y Matrimonio</h3>
+                            <p>Recursos para fortalecer la familia, matrimonio y crianza con valores cristianos.</p>
+                            <div class="categoria-stats">
+                                <span class="stat">95+ Libros</span>
+                                <span class="stat">20 Seminarios</span>
+                            </div>
+                            <button class="btn-explorar">Explorar Colección</button>
+                        </div>
+
+                        <!-- Tarjeta 5 - Juventud -->
+                        <div class="categoria-card">
+                            <div class="categoria-icono">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h3>Juventud y Adolescentes</h3>
+                            <p>Material especializado para ministerio juvenil y recursos para jóvenes cristianos.</p>
+                            <div class="categoria-stats">
+                                <span class="stat">75+ Recursos</span>
+                                <span class="stat">15 Programas</span>
+                            </div>
+                            <button class="btn-explorar">Explorar Colección</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controles de navegación -->
+                <div class="slider-controls">
+                    <button class="slider-btn prev-btn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="slider-btn next-btn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <!-- Sección de Logo -->
+            <a class="footer-section logo-section">
+                <img src="./img/logo - vertical.png" alt="Logo Ministerio" class="footer-logo">
+            </a>  
+            <!-- Sección de Contacto -->
+            <div class="footer-section contact-section">
+                <h2 class="footer-heading">CONTACTO</h2>
+                <ul class="contact-list">
+                    <li class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Av. Báez Osorio Leopoldo Navarro, Santo Domingo
+                    </li>
+                    <li class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        (809) 123-4567
+                    </li>
+                    <li class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        info@mineduc.gob.do
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Línea divisoria -->
+            <div class="footer-divider"></div>
+
+            <!-- Sección Redes Sociales -->
+            <div class="footer-section social-section">
+                <h2 class="footer-heading">SÍGUENOS</h2>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/educacionadrd?igsh=cm1ucXV3czN0aHY3" class="social-icon" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@EDUCACIONADRD" class="social-icon" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://open.spotify.com/episode/2ywMb45l1HWVa13kTzxzA9?si=7ni3a-VCQXW1KiCeNUGvEg" class="social-icon" target="_blank">
+                        <i class="fab fa-spotify"></i>
+                    </a>
+                    <a href="https://whatsapp.com/channel/0029Vb677MK8vd1YRM9qdo0R" class="social-icon" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Sección Derechos -->
+            <div class="footer-section copyright-section">
+                <p class="copyright-text">
+                    © 2025 Ministerio de Educación A.D<br>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts Globales -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="./js/Biblioteca.js"></script>
+</body>
+</html>
