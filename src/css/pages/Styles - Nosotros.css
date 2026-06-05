@@ -68,7 +68,7 @@
 }
 
 /*No mover - Manteniendo tu estructura de 2 columnas*/
-.nivel.coordinador {
+.nivel.direccion {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2.5rem;
@@ -85,7 +85,7 @@
     height: 100%;
 }
 
-.tarjeta-coordinador {
+.tarjeta-direccion {
     background: white;
     padding: 1.5rem;
     border-radius: 15px;
@@ -135,7 +135,7 @@
             font-size: 1.2rem;
         }
 
-.tarjeta-coordinador:hover {
+.tarjeta-direccion:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
@@ -163,25 +163,25 @@
 
 /* Sistema responsivo mejorado */
 @media (max-width: 1200px) {
-    .nivel.coordinador {
+    .nivel.direccion {
         gap: 2rem;
         padding: 1rem 0;
     }
 
-    .tarjeta-coordinador {
+    .tarjeta-direccion {
         min-height: 300px;
         padding: 1.2rem;
     }
 }
 
 @media (max-width: 992px) {
-    .nivel.coordinador {
+    .nivel.direccion {
         grid-template-columns: 1fr;
         max-width: 600px;
         margin: 0 auto;
     }
 
-    .tarjeta-coordinador {
+    .tarjeta-direccion {
         min-height: auto;
         margin-bottom: 1.5rem;
     }
@@ -219,7 +219,7 @@
 }
 
 @media (max-width: 480px) {
-    .tarjeta-coordinador {
+    .tarjeta-direccion {
         padding: 1rem;
     }
 
