@@ -1,4 +1,27 @@
-// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+// --- Botón Volver Arriba (Scroll to Top) ---
+document.addEventListener('DOMContentLoaded', () => {
+    // Crear el botón dinámicamente
+    const scrollToTopBtn = document.createElement('button');
+    scrollToTopBtn.id = 'scroll-to-top';
+    scrollToTopBtn.className = 'scroll-to-top-btn';
+    scrollToTopBtn.setAttribute('aria-label', 'Volver arriba');
+    scrollToTopBtn.innerHTML = '<i class="fas fa-chevron-up"></i>';
+    document.body.appendChild(scrollToTopBtn);
 
-// Write your JavaScript code.
+    // Mostrar u ocultar el botón al hacer scroll
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            scrollToTopBtn.classList.add('visible');
+        } else {
+            scrollToTopBtn.classList.remove('visible');
+        }
+    });
+
+    // Evento de clic para scroll suave
+    scrollToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+});
