@@ -44,6 +44,9 @@
                         <a class="nav-link active" href="./programas.html">Programas</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="./institutos.html">Institutos</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="./biblioteca.html">Biblioteca</a>
                     </li>
                     <li class="nav-item">
@@ -67,188 +70,113 @@
             <div class="container">
                 <h2 class="titulo-seccion">Nuestros Programas Educativos</h2>
 
-                <!-- Filtros por categoría -->
-                <div class="filtros-programas">
-                    <button class="filtro-btn active" data-categoria="todos">Todos los Programas</button>
-                    <button class="filtro-btn" data-categoria="teologia">Teología</button>
-                    <button class="filtro-btn" data-categoria="ministerio">Ministerio</button>
-                    <button class="filtro-btn" data-categoria="educacion">Educación</button>
-                    <button class="filtro-btn" data-categoria="liderazgo">Liderazgo</button>
-                </div>
-
                 <!-- Grid de Programas -->
                 <div class="programas-grid">
-                    <!-- Programa 1 - Licenciatura en Teología -->
+                    <!-- Programa 1 - ISUM -->
+                    <div class="programa-card" data-categoria="teologia">
+                        <div class="programa-header">
+                            <div class="programa-icono">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h3>Instituto de Superación Ministerial (ISUM)</h3>
+                            <span class="programa-nivel">Ministerial</span>
+                        </div>
+                        <div class="programa-body">
+                            <p class="programa-descripcion">
+                                Institución oficial de nivel superior de las Asambleas de Dios que ofrece formación teológica y ministerial avanzada para pastores y ministros.
+                            </p>
+                            <ul class="programa-caracteristicas">
+                                <li><i class="fas fa-clock"></i> Metodología: Módulos intensivos</li>
+                                <li><i class="fas fa-book"></i> Grado: Licenciatura en Teología Ministerial</li>
+                                <li><i class="fas fa-user-graduate"></i> Dirigido a: Pastores y obreros con credenciales</li>
+                            </ul>
+                        </div>
+                        <div class="programa-footer">
+                            <div class="programa-precio">
+                                <span class="modalidad">Presencial y Sincrónico</span>
+                            </div>
+                            <a href="./contacto.html" class="btn-programa btn-inscribir text-decoration-none text-center">Más Información</a>
+                        </div>
+                    </div>
+
+                    <!-- Programa 2 - Facultad de Teología -->
                     <div class="programa-card" data-categoria="teologia">
                         <div class="programa-header">
                             <div class="programa-icono">
                                 <i class="fas fa-bible"></i>
                             </div>
-                            <h3>Licenciatura en Teología</h3>
-                            <span class="programa-nivel">Pregrado</span>
+                            <h3>Facultad de Teología de las Asambleas de Dios</h3>
+                            <span class="programa-nivel">Académico</span>
                         </div>
                         <div class="programa-body">
                             <p class="programa-descripcion">
-                                Formación teológica integral para el servicio ministerial y la investigación bíblica.
+                                Programa oficial de posgrado del Servicio de Educación Cristiana (SEC) de las Asambleas de Dios, orientado a la investigación teológica y docencia superior.
                             </p>
                             <ul class="programa-caracteristicas">
-                                <li><i class="fas fa-clock"></i> Duración: 4 años</li>
-                                <li><i class="fas fa-book"></i> 48 asignaturas</li>
-                                <li><i class="fas fa-user-graduate"></i> Titulación: Licenciado</li>
+                                <li><i class="fas fa-clock"></i> Metodología: Módulos intensivos anuales</li>
+                                <li><i class="fas fa-book"></i> Grado: Maestría en Teología y Divinidades</li>
+                                <li><i class="fas fa-user-graduate"></i> Dirigido a: Graduados de ISUM y ministros</li>
                             </ul>
                         </div>
                         <div class="programa-footer">
                             <div class="programa-precio">
-                                <span class="precio">$180/mes</span>
-                                <span class="modalidad">En línea</span>
+                                <span class="modalidad">Presencial y Virtual</span>
                             </div>
-                            <button class="btn-programa btn-info">Más Información</button>
-                            <button class="btn-programa btn-inscribir">Inscribirse</button>
+                            <a href="./contacto.html" class="btn-programa btn-inscribir text-decoration-none text-center">Más Información</a>
                         </div>
                     </div>
 
-                    <!-- Programa 2 - Maestría en Ministerio -->
+                    <!-- Programa 3 - Institutos Bíblicos -->
                     <div class="programa-card" data-categoria="ministerio">
                         <div class="programa-header">
                             <div class="programa-icono">
-                                <i class="fas fa-church"></i>
+                                <i class="fas fa-school"></i>
                             </div>
-                            <h3>Maestría en Ministerio Pastoral</h3>
-                            <span class="programa-nivel">Posgrado</span>
+                            <h3>Institutos Bíblicos</h3>
+                            <span class="programa-nivel">Ministerial</span>
                         </div>
                         <div class="programa-body">
                             <p class="programa-descripcion">
-                                Especialización para el liderazgo pastoral y la administración de iglesias.
+                                Programa de formación ministerial y eclesiástica fundamental del Concilio de las Asambleas de Dios, impartido localmente en nuestras 35 sedes de todo el país.
                             </p>
                             <ul class="programa-caracteristicas">
-                                <li><i class="fas fa-clock"></i> Duración: 2 años</li>
-                                <li><i class="fas fa-book"></i> 36 créditos</li>
-                                <li><i class="fas fa-user-graduate"></i> Titulación: Magíster</li>
+                                <li><i class="fas fa-clock"></i> Duración: 3 años de estudio</li>
+                                <li><i class="fas fa-book"></i> Metodología: Clases semanales presenciales</li>
+                                <li><i class="fas fa-user-graduate"></i> Dirigido a: Líderes y miembros de la iglesia local</li>
                             </ul>
                         </div>
                         <div class="programa-footer">
                             <div class="programa-precio">
-                                <span class="precio">$220/mes</span>
-                                <span class="modalidad">Semipresencial</span>
+                                <span class="modalidad">Presencial (35 Sedes)</span>
                             </div>
-                            <button class="btn-programa btn-info">Más Información</button>
-                            <button class="btn-programa btn-inscribir">Inscribirse</button>
+                            <a href="./institutos.html" class="btn-programa btn-inscribir text-decoration-none text-center">Ver Sedes</a>
                         </div>
                     </div>
 
-                    <!-- Programa 3 - Diplomado en Educación Cristiana -->
-                    <div class="programa-card" data-categoria="educacion">
-                        <div class="programa-header">
-                            <div class="programa-icono">
-                                <i class="fas fa-graduation-cap"></i>
-                            </div>
-                            <h3>Diplomado en Educación Cristiana</h3>
-                            <span class="programa-nivel">Diplomado</span>
-                        </div>
-                        <div class="programa-body">
-                            <p class="programa-descripcion">
-                                Formación especializada para educadores en instituciones cristianas.
-                            </p>
-                            <ul class="programa-caracteristicas">
-                                <li><i class="fas fa-clock"></i> Duración: 8 meses</li>
-                                <li><i class="fas fa-book"></i> 12 módulos</li>
-                                <li><i class="fas fa-user-graduate"></i> Certificación: Diplomado</li>
-                            </ul>
-                        </div>
-                        <div class="programa-footer">
-                            <div class="programa-precio">
-                                <span class="precio">$120/mes</span>
-                                <span class="modalidad">En línea</span>
-                            </div>
-                            <button class="btn-programa btn-info">Más Información</button>
-                            <button class="btn-programa btn-inscribir">Inscribirse</button>
-                        </div>
-                    </div>
-
-                    <!-- Programa 4 - Doctorado en Liderazgo -->
-                    <div class="programa-card" data-categoria="liderazgo">
-                        <div class="programa-header">
-                            <div class="programa-icono">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <h3>Doctorado en Liderazgo Cristiano</h3>
-                            <span class="programa-nivel">Doctorado</span>
-                        </div>
-                        <div class="programa-body">
-                            <p class="programa-descripcion">
-                                Programa doctoral para la investigación y desarrollo del liderazgo cristiano.
-                            </p>
-                            <ul class="programa-caracteristicas">
-                                <li><i class="fas fa-clock"></i> Duración: 3 años</li>
-                                <li><i class="fas fa-book"></i> 60 créditos</li>
-                                <li><i class="fas fa-user-graduate"></i> Titulación: Doctor</li>
-                            </ul>
-                        </div>
-                        <div class="programa-footer">
-                            <div class="programa-precio">
-                                <span class="precio">$350/mes</span>
-                                <span class="modalidad">Presencial</span>
-                            </div>
-                            <button class="btn-programa btn-info">Más Información</button>
-                            <button class="btn-programa btn-inscribir">Inscribirse</button>
-                        </div>
-                    </div>
-
-                    <!-- Programa 5 - Bachillerato en Teología -->
+                    <!-- Programa 4 - Global University -->
                     <div class="programa-card" data-categoria="teologia">
                         <div class="programa-header">
                             <div class="programa-icono">
-                                <i class="fas fa-cross"></i>
+                                <i class="fas fa-globe"></i>
                             </div>
-                            <h3>Bachillerato en Teología</h3>
-                            <span class="programa-nivel">Pregrado</span>
+                            <h3>Global University</h3>
+                            <span class="programa-nivel">Académico</span>
                         </div>
                         <div class="programa-body">
                             <p class="programa-descripcion">
-                                Formación básica en teología para el servicio ministerial inicial.
+                                Universidad teológica internacional a distancia de las Asambleas de Dios, representada formalmente en RD para capacitar ministros con acreditación de EE.UU.
                             </p>
                             <ul class="programa-caracteristicas">
-                                <li><i class="fas fa-clock"></i> Duración: 3 años</li>
-                                <li><i class="fas fa-book"></i> 36 asignaturas</li>
-                                <li><i class="fas fa-user-graduate"></i> Titulación: Bachiller</li>
+                                <li><i class="fas fa-clock"></i> Metodología: Educación a distancia flexible</li>
+                                <li><i class="fas fa-book"></i> Programas: Escuela Berea y Licenciaturas</li>
+                                <li><i class="fas fa-user-graduate"></i> Acreditación: Internacional de Springfield, MO</li>
                             </ul>
                         </div>
                         <div class="programa-footer">
                             <div class="programa-precio">
-                                <span class="precio">$150/mes</span>
-                                <span class="modalidad">En línea</span>
+                                <span class="modalidad">A Distancia / Virtual</span>
                             </div>
-                            <button class="btn-programa btn-info">Más Información</button>
-                            <button class="btn-programa btn-inscribir">Inscribirse</button>
-                        </div>
-                    </div>
-
-                    <!-- Programa 6 - Especialización en Consejería -->
-                    <div class="programa-card" data-categoria="ministerio">
-                        <div class="programa-header">
-                            <div class="programa-icono">
-                                <i class="fas fa-hands-helping"></i>
-                            </div>
-                            <h3>Especialización en Consejería Cristiana</h3>
-                            <span class="programa-nivel">Especialización</span>
-                        </div>
-                        <div class="programa-body">
-                            <p class="programa-descripcion">
-                                Formación en consejería bíblica para el acompañamiento espiritual.
-                            </p>
-                            <ul class="programa-caracteristicas">
-                                <li><i class="fas fa-clock"></i> Duración: 18 meses</li>
-                                <li><i class="fas fa-book"></i> 24 créditos</li>
-                                <li><i class="fas fa-user-graduate"></i> Titulación: Especialista</li>
-                            </ul>
-                        </div>
-                        <div class="programa-footer">
-                            <div class="programa-precio">
-                                <span class="precio">$200/mes</span>
-                                <span class="modalidad">Semipresencial</span>
-                            </div>
-                            <button class="btn-programa btn-info">Más Información</button>
-                            <button class="btn-programa btn-inscribir">Inscribirse</button>
+                            <a href="./contacto.html" class="btn-programa btn-inscribir text-decoration-none text-center">Más Información</a>
                         </div>
                     </div>
                 </div>
@@ -316,11 +244,11 @@
                     </li>
                     <li class="contact-item">
                         <i class="fas fa-phone"></i>
-                        (809) 123-4567
+                        (809) 792-6183
                     </li>
                     <li class="contact-item">
                         <i class="fas fa-envelope"></i>
-                        info@mineduc.gob.do
+                        educacionadrd@gmail.com
                     </li>
                 </ul>
             </div>
@@ -358,6 +286,5 @@
 
     <!-- Scripts Globales -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script type="module" src="./js/Programas.js"></script>
 </body>
 </html>

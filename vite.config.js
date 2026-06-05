@@ -13,6 +13,7 @@ export default defineConfig({
         main: resolve(__dirname, 'src/index.html'),
         nosotros: resolve(__dirname, 'src/nosotros.html'),
         programas: resolve(__dirname, 'src/programas.html'),
+        institutos: resolve(__dirname, 'src/institutos.html'),
         biblioteca: resolve(__dirname, 'src/biblioteca.html'),
         contacto: resolve(__dirname, 'src/contacto.html'),
       },

@@ -28,9 +28,40 @@
         }
 
         .map-container {
-            height: 400px;
+            height: 250px;
             border-radius: 10px;
             overflow: hidden;
+        }
+
+        @media (min-width: 768px) {
+            .map-container {
+                height: 400px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .list-group-item h6 {
+                font-size: 0.95rem !important;
+            }
+            .list-group-item p {
+                font-size: 0.8rem !important;
+            }
+            .list-group-item a {
+                font-size: 0.8rem !important;
+            }
+            .list-group-item .rounded-circle {
+                width: 32px !important;
+                height: 32px !important;
+            }
+            .list-group-item .rounded-circle i {
+                font-size: 0.9rem;
+            }
+            .contact-info-item h5 {
+                font-size: 1.1rem !important;
+            }
+            .contact-info-item p {
+                font-size: 0.9rem !important;
+            }
         }
     </style>
 </head>
@@ -61,6 +92,9 @@
                         <a class="nav-link" href="./programas.html">Programas</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="./institutos.html">Institutos</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="./biblioteca.html">Biblioteca</a>
                     </li>
                     <li class="nav-item">
@@ -82,93 +116,121 @@
     <!-- Sección de Contacto -->
     <section class="py-5">
         <div class="container">
-            <div class="row g-5">
-                <!-- Formulario -->
+            <div class="row g-4 g-md-5">
+                <!-- Directorio de Direcciones y Teléfonos -->
                 <div class="col-md-6">
-                    <h2 class="mb-4">Envíanos un mensaje</h2>
-                    <form id="contactForm">
-                        <div class="mb-3">
-                            <label for="nombre" class="form-label">Nombre completo</label>
-                            <input type="text" class="form-control" id="nombre" name="nombre" required>
-                        </div>
-
-                        <div class="row mb-3">
-                            <div class="col-md-6">
-                                <label for="email" class="form-label">Correo electrónico</label>
-                                <input type="email" class="form-control" id="email" name="email" required>
+                    <div class="card shadow-sm border-0 p-4" style="background: #ffffff; border-radius: 15px; border-top: 4px solid #E64F22 !important;">
+                        <h2 class="mb-4" style="color: #0F3968; font-family: 'Garet', Arial, sans-serif !important; font-weight: 700;"><i class="fas fa-phone-alt me-2" style="color: #E64F22;"></i>Directorio de Direcciones</h2>
+                        <p class="text-muted mb-4">Comunícate directamente con la Dirección correspondiente para agilizar tu trámite o consulta:</p>
+                        
+                        <div class="list-group list-group-flush">
+                            <!-- Directorio Items -->
+                            <div class="list-group-item border-0 px-0 py-3 d-flex align-items-center">
+                                <div class="text-white rounded-circle me-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px; background-color: #0F3968 !important; flex-shrink: 0;">
+                                    <i class="fas fa-user-tie"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-1 fw-bold" style="font-family: 'Garet', Arial, sans-serif !important; color: #0F3968;">Director Nacional</h6>
+                                    <p class="mb-0 text-muted small">Alfredo Ygnacio De La Cruz</p>
+                                    <a href="tel:+18097926183,100" class="fw-semibold text-decoration-none small" style="color: #E64F22 !important;"><i class="fas fa-phone-alt me-1"></i>(809) 792-6183 Ext. 100</a>
+                                </div>
                             </div>
-                            <div class="col-md-6">
-                                <label for="telefono" class="form-label">Teléfono</label>
-                                <input type="tel" class="form-control" id="telefono" name="telefono" pattern="[0-9]{8,10}">
+
+                            <div class="list-group-item border-0 px-0 py-3 d-flex align-items-center">
+                                <div class="rounded-circle me-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px; background-color: rgba(15, 57, 104, 0.08) !important; color: #0F3968 !important; flex-shrink: 0;">
+                                    <i class="fas fa-book-open"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-1 fw-bold" style="font-family: 'Garet', Arial, sans-serif !important; color: #0F3968;">Dirección de Escuela Bíblica Dominical</h6>
+                                    <p class="mb-0 text-muted small">Frankely Gonzalez</p>
+                                    <a href="tel:+18097926183,101" class="fw-semibold text-decoration-none small" style="color: #E64F22 !important;"><i class="fas fa-phone-alt me-1"></i>(809) 792-6183 Ext. 101</a>
+                                </div>
+                            </div>
+
+                            <div class="list-group-item border-0 px-0 py-3 d-flex align-items-center">
+                                <div class="rounded-circle me-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px; background-color: rgba(15, 57, 104, 0.08) !important; color: #0F3968 !important; flex-shrink: 0;">
+                                    <i class="fas fa-bible"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-1 fw-bold" style="font-family: 'Garet', Arial, sans-serif !important; color: #0F3968;">Dirección de Institutos Bíblicos</h6>
+                                    <p class="mb-0 text-muted small">José Tejada (Wilson)</p>
+                                    <a href="tel:+18097926183,102" class="fw-semibold text-decoration-none small" style="color: #E64F22 !important;"><i class="fas fa-phone-alt me-1"></i>(809) 792-6183 Ext. 102</a>
+                                </div>
+                            </div>
+
+                            <div class="list-group-item border-0 px-0 py-3 d-flex align-items-center">
+                                <div class="rounded-circle me-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px; background-color: rgba(15, 57, 104, 0.08) !important; color: #0F3968 !important; flex-shrink: 0;">
+                                    <i class="fas fa-school"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-1 fw-bold" style="font-family: 'Garet', Arial, sans-serif !important; color: #0F3968;">Dirección de Colegios A.D</h6>
+                                    <p class="mb-0 text-muted small">Xionarra Polanco</p>
+                                    <a href="tel:+18097926183,103" class="fw-semibold text-decoration-none small" style="color: #E64F22 !important;"><i class="fas fa-phone-alt me-1"></i>(809) 792-6183 Ext. 103</a>
+                                </div>
+                            </div>
+
+                            <div class="list-group-item border-0 px-0 py-3 d-flex align-items-center">
+                                <div class="rounded-circle me-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px; background-color: rgba(15, 57, 104, 0.08) !important; color: #0F3968 !important; flex-shrink: 0;">
+                                    <i class="fas fa-users-cog"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-1 fw-bold" style="font-family: 'Garet', Arial, sans-serif !important; color: #0F3968;">Dirección de Discipulado y Formación de Líderes</h6>
+                                    <p class="mb-0 text-muted small">Miguel Ovalle</p>
+                                    <a href="tel:+18097926183,104" class="fw-semibold text-decoration-none small" style="color: #E64F22 !important;"><i class="fas fa-phone-alt me-1"></i>(809) 792-6183 Ext. 104</a>
+                                </div>
+                            </div>
+
+                            <div class="list-group-item border-0 px-0 py-3 d-flex align-items-center">
+                                <div class="rounded-circle me-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px; background-color: rgba(15, 57, 104, 0.08) !important; color: #0F3968 !important; flex-shrink: 0;">
+                                    <i class="fas fa-laptop-house"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-1 fw-bold" style="font-family: 'Garet', Arial, sans-serif !important; color: #0F3968;">Dirección de Educación a Distancia</h6>
+                                    <p class="mb-0 text-muted small">Josué Ovalle</p>
+                                    <a href="tel:+18097926183,105" class="fw-semibold text-decoration-none small" style="color: #E64F22 !important;"><i class="fas fa-phone-alt me-1"></i>(809) 792-6183 Ext. 105</a>
+                                </div>
+                            </div>
+
+                            <div class="list-group-item border-0 px-0 py-3 d-flex align-items-center">
+                                <div class="rounded-circle me-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px; background-color: rgba(15, 57, 104, 0.08) !important; color: #0F3968 !important; flex-shrink: 0;">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-1 fw-bold" style="font-family: 'Garet', Arial, sans-serif !important; color: #0F3968;">Dirección de Educación Superior</h6>
+                                    <p class="mb-0 text-muted small">Edwin Mercedes</p>
+                                    <a href="tel:+18097926183,106" class="fw-semibold text-decoration-none small" style="color: #E64F22 !important;"><i class="fas fa-phone-alt me-1"></i>(809) 792-6183 Ext. 106</a>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="mb-3">
-                            <label for="asunto" class="form-label">Asunto</label>
-                            <select class="form-select" id="asunto" name="asunto" required>
-                                <option value="">Seleccione un asunto</option>
-                                <option>Admisiones</option>
-                                <option>Información académica</option>
-                                <option>Eventos</option>
-                                <option>Otro</option>
-                            </select>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="mensaje" class="form-label">Mensaje</label>
-                            <textarea class="form-control" id="mensaje" name="mensaje" rows="5" required></textarea>
-                        </div>
-
-                        <!-- Campo honeypot para protección contra bots -->
-                        <div class="d-none">
-                            <input type="text" name="honeypot" id="honeypot">
-                        </div>
-
-                        <button type="submit" class="btn btn-primary px-4 py-2" style="border-radius: 8px;">
-                            <i class="fas fa-paper-plane me-2"></i>Enviar mensaje
-                        </button>
-                    </form>
+                    </div>
                 </div>
 
-                <!-- Información de Contacto -->
+                <!-- Información de la Sede y Mapa -->
                 <div class="col-md-6">
                     <div class="mb-5">
-                        <h2 class="mb-4">Información de contacto</h2>
+                        <h2 class="mb-4" style="color: #0F3968; font-family: 'Garet', Arial, sans-serif !important; font-weight: 700;">Información de la Sede</h2>
+                        
                         <div class="contact-info-item mb-4">
                             <div class="d-flex align-items-center">
-                                <div class="icon-circle bg-primary text-white me-3" style="width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <div class="text-white me-3 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; border-radius: 50%; background-color: #0F3968 !important; flex-shrink: 0; font-size: 1.25rem;">
                                     <i class="fas fa-map-marker-alt"></i>
                                 </div>
                                 <div>
-                                    <h5>Dirección</h5>
-                                    <p class="mb-0">Av. Bolívar Esq. Leopoldo Navarro, Santo Domingo</p>
+                                    <h5 style="font-family: 'Garet', Arial, sans-serif !important; color: #0F3968; font-weight: 700; margin-bottom: 0.25rem;">Dirección de la Sede Central</h5>
+                                    <p class="mb-0 text-muted">Av. Leopoldo Navarro Esq. Bolívar, Santo Domingo, República Dominicana</p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="contact-info-item mb-4">
                             <div class="d-flex align-items-center">
-                                <div class="icon-circle bg-success text-white me-3" style="width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <div class="text-white me-3 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; border-radius: 50%; background-color: #E64F22 !important; flex-shrink: 0; font-size: 1.25rem;">
                                     <i class="fas fa-phone"></i>
                                 </div>
                                 <div>
-                                    <h5>Teléfonos</h5>
-                                    <p class="mb-0">
-                                        Oficinas: (809) 123-4567
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="contact-info-item mb-4">
-                            <div class="d-flex align-items-center">
-                                <div class="icon-circle bg-info text-white me-3" style="width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                                    <i class="fas fa-envelope"></i>
-                                </div>
-                                <div>
-                                    <h5>Correos electrónicos</h5>
-                                    <p class="mb-0">
-                                        General: info@mineduc.gob.do
+                                    <h5 style="font-family: 'Garet', Arial, sans-serif !important; color: #0F3968; font-weight: 700; margin-bottom: 0.25rem;">Teléfono General</h5>
+                                    <p class="mb-0 text-muted">
+                                        Oficinas: (809) 792-6183
                                     </p>
                                 </div>
                             </div>
@@ -177,7 +239,7 @@
 
                     <!-- Mapa -->
                     <div class="map-container mb-4">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15050.551921224216!2d-99.1353794!3d19.4326292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f92b75aa014d%3A0x17e617c1a85a0413!2sZ%C3%B3calo%20de%20la%20Ciudad%20de%20M%C3%A9xico!5e0!3m2!1ses!2smx!4v1716856754874!5m2!1ses!2smx"
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.2869098317765!2d-69.9015949!3d18.4754593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eaf89bf65d8a901%3A0xea5f4f6c4495e865!2sAv.%20Leopoldo%20Navarro%2C%20Santo%20Domingo!5e0!3m2!1ses!2sdo!4v1716856754874!5m2!1ses!2sdo"
                                 width="100%"
                                 height="100%"
                                 style="border:0;"
@@ -208,11 +270,11 @@
                     </li>
                     <li class="contact-item">
                         <i class="fas fa-phone"></i>
-                        (809) 123-4567
+                        (809) 792-6183
                     </li>
                     <li class="contact-item">
                         <i class="fas fa-envelope"></i>
-                        info@mineduc.gob.do
+                        educacionadrd@gmail.com
                     </li>
                 </ul>
             </div>
@@ -249,19 +311,5 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            // Validación del honeypot
-            if(document.getElementById('honeypot').value !== '') {
-                return;
-            }
-
-            // Simulación de envío exitoso
-            alert('Mensaje enviado correctamente. Nos pondremos en contacto pronto.');
-            this.reset();
-        });
-    </script>
 </body>
 </html>

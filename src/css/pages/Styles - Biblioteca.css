@@ -23,7 +23,7 @@
     font-weight: 300;
 }
 
-/* Sección Categorías */
+/* SecciÃ³n CategorÃ­as */
 .categorias-biblioteca {
     padding: 80px 0;
     background: #f8f9fa;
@@ -57,7 +57,7 @@
     justify-content: flex-start;
 }
 
-/* Tarjetas de categorías */
+/* Tarjetas de categorÃ­as */
 .categoria-card {
     background: white;
     padding: 2.5rem;
@@ -190,7 +190,7 @@
         transform: none;
     }
 
-/* Sección Destacados */
+/* SecciÃ³n Destacados */
 .destacados-biblioteca {
     padding: 80px 0;
     background: white;

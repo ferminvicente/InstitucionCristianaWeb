@@ -1,0 +1,333 @@
+/* ========== ESTILOS DE SEDES DE INSTITUTOS ========== */
+
+/* Hero Section */
+.institutos-hero {
+    background: linear-gradient(45deg, #2D3255, #0F3968);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+    font-family: 'Garet', Arial, sans-serif;
+}
+
+.institutos-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: white;
+}
+
+.institutos-hero .hero-subtitle {
+    font-size: 1.35rem;
+    opacity: 0.9;
+    color: white;
+    font-weight: 300;
+}
+
+/* Sección Directorio y Mapa */
+.institutos-directory-section {
+    background: #f8f9fa;
+    font-family: 'Garet', Arial, sans-serif;
+}
+
+.directory-title {
+    color: #0F3968;
+    font-weight: 700;
+    font-size: 1.8rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.directory-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: #E64F22;
+    border-radius: 2px;
+}
+
+/* Panel de Filtros */
+.filters-panel {
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #e9ecef;
+}
+
+.search-box .search-icon {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #6c757d;
+    font-size: 1rem;
+}
+
+.search-box input {
+    padding-left: 2.7rem;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    height: 45px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.search-box input:focus {
+    border-color: #0F3968;
+    box-shadow: 0 0 0 0.2rem rgba(15, 57, 104, 0.25);
+}
+
+#presbiterio-select {
+    border-radius: 8px;
+    height: 45px;
+    font-size: 0.95rem;
+    border: 1px solid #ced4da;
+}
+
+#presbiterio-select:focus {
+    border-color: #0F3968;
+    box-shadow: 0 0 0 0.2rem rgba(15, 57, 104, 0.25);
+}
+
+.filter-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #495057;
+}
+
+.btn-filter {
+    background: white;
+    border: 1.5px solid #0F3968;
+    color: #0F3968;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.4rem 1.2rem;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+}
+
+.btn-filter:hover,
+.btn-filter.active {
+    background: #0F3968;
+    color: white;
+    transform: translateY(-1px);
+}
+
+.results-count {
+    font-size: 0.9rem;
+    color: #6c757d;
+    font-weight: 500;
+}
+
+/* Lista Scrollable */
+.institutos-scroll-list {
+    max-height: 650px;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+/* Scrollbar Personalizado */
+.institutos-scroll-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.institutos-scroll-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.institutos-scroll-list::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 10px;
+}
+
+.institutos-scroll-list::-webkit-scrollbar-thumb:hover {
+    background: #0F3968;
+}
+
+/* Tarjetas de Instituto */
+.instituto-card {
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #e9ecef;
+    border-left: 5px solid #0F3968;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.instituto-card:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+    border-left-color: #E64F22;
+}
+
+.instituto-card.active-card {
+    background: #f1f5f9;
+    border-left-color: #E64F22;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.instituto-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #0F3968;
+    margin-bottom: 0.4rem;
+}
+
+.presbiterio-tag {
+    display: inline-block;
+    background: rgba(15, 57, 104, 0.08);
+    color: #0F3968;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.2rem 0.6rem;
+    border-radius: 6px;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+}
+
+.info-line {
+    font-size: 0.85rem;
+    color: #495057;
+    margin-bottom: 0.4rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    line-height: 1.4;
+}
+
+.info-line i {
+    color: #E64F22;
+    margin-top: 0.25rem;
+    width: 14px;
+    text-align: center;
+}
+
+.card-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.btn-action {
+    flex: 1;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.45rem 0.6rem;
+    border-radius: 6px;
+    text-align: center;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.btn-action-call {
+    background: transparent;
+    border-color: #0F3968;
+    color: #0F3968;
+}
+
+.btn-action-call:hover {
+    background: #0F3968;
+    color: white;
+}
+
+.btn-action-map {
+    background: #E64F22;
+    color: white;
+}
+
+.btn-action-map:hover {
+    background: #ff6b35;
+    color: white;
+}
+
+/* Sticky Mapa Container */
+.map-sticky-container {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 95px; /* Altura del navbar fijo + espaciado */
+    z-index: 10;
+}
+
+.map-header {
+    background: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.map-frame {
+    height: 550px;
+    width: 100%;
+}
+
+/* Leaflet popups personalización */
+.leaflet-popup-content-wrapper {
+    border-radius: 10px;
+    box-shadow: 0 3px 14px rgba(0,0,0,0.15);
+    font-family: 'Garet', Arial, sans-serif;
+}
+
+.leaflet-popup-content {
+    margin: 13px 15px;
+    line-height: 1.4;
+}
+
+.leaflet-popup-content h4 {
+    color: #0F3968;
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 0.3rem;
+}
+
+.leaflet-popup-content p {
+    margin: 0 0 4px 0;
+    font-size: 0.8rem;
+    color: #495057;
+}
+
+.leaflet-popup-content a {
+    color: #E64F22;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.8rem;
+    display: inline-block;
+    margin-top: 4px;
+}
+
+.leaflet-popup-content a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .institutos-hero {
+        padding: 50px 0;
+    }
+    
+    .institutos-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .institutos-hero .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .map-sticky-container {
+        position: static;
+        margin-bottom: 1.5rem;
+    }
+
+    .map-frame {
+        height: 350px;
+    }
+
+    .institutos-scroll-list {
+        max-height: none;
+        overflow-y: visible;
+        padding-right: 0;
+    }
+}

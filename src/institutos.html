@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sedes de Institutos Bíblicos - Ministerio de Educación</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Leaflet.js CSS (Mapa interactivo) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="./css/Styles - Main.css">
+    <link rel="stylesheet" href="./css/components/Styles - Navbar.css">
+    <link rel="stylesheet" href="./css/components/Styles - Footer.css">
+    <link rel="stylesheet" href="./css/pages/Styles - Institutos.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="./index.html">
+                <img src="./img/logo - horizontal.png" alt="Logo Ministerio" class="navbar-logo">
+            </a>
+
+            <!-- Botón Hamburguesa -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Elementos del Menú -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./programas.html">Programas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./institutos.html">Institutos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./biblioteca.html">Biblioteca</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div> 
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main>
+        <section class="institutos-hero">
+            <div class="container">
+                <h1>Nuestros Institutos Bíblicos</h1>
+                <p class="hero-subtitle">35 sedes oficiales en toda la República Dominicana para capacitar obreros y pastores</p>
+            </div>
+        </section>
+
+        <section class="institutos-directory-section">
+            <div class="container-fluid px-lg-5 py-4">
+                <div class="row g-4">
+                    <!-- Columna de Filtros e Institutos (Izquierda) -->
+                    <div class="col-lg-6 col-xl-7 order-2 order-lg-1">
+                        <div class="directory-container">
+                            <h2 class="directory-title mb-4">Directorio Nacional</h2>
+
+                            <!-- Panel de búsqueda y filtros -->
+                            <div class="filters-panel p-3 mb-4 shadow-sm">
+                                <div class="row g-3">
+                                    <!-- Buscador de texto -->
+                                    <div class="col-md-7">
+                                        <div class="search-box position-relative">
+                                            <i class="fas fa-search search-icon"></i>
+                                            <input type="text" id="search-input" class="form-control" placeholder="Buscar por nombre, dirección o presbiterio...">
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Selector de presbiterios -->
+                                    <div class="col-md-5">
+                                        <select id="presbiterio-select" class="form-select">
+                                            <option value="">Todos los Presbiterios</option>
+                                            <!-- Las opciones se generarán dinámicamente -->
+                                        </select>
+                                    </div>
+
+                                    <!-- Filtro de modalidad -->
+                                    <div class="col-12 d-flex flex-wrap gap-2 align-items-center mt-3">
+                                        <span class="filter-label me-2">Modalidad:</span>
+                                        <button class="btn btn-filter active" data-modalidad="todos">Todos</button>
+                                        <button class="btn btn-filter" data-modalidad="Nocturna">Nocturna</button>
+                                        <button class="btn btn-filter" data-modalidad="Sabatina">Sabatina</button>
+                                        <button class="btn btn-filter" data-modalidad="Interno">Interno</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Contador de resultados -->
+                            <div class="results-meta d-flex justify-content-between align-items-center mb-3">
+                                <span class="results-count" id="results-count-text">Mostrando 35 sedes</span>
+                                <button id="btn-reset-filters" class="btn btn-link text-decoration-none p-0 d-none">
+                                    <i class="fas fa-undo me-1"></i>Limpiar filtros
+                                </button>
+                            </div>
+
+                            <!-- Listado de tarjetas de Institutos -->
+                            <div id="institutos-list" class="institutos-scroll-list">
+                                <!-- Tarjetas generadas dinámicamente por JS -->
+                                <div class="d-flex justify-content-center py-5" id="loader">
+                                    <div class="spinner-border text-primary" role="status">
+                                        <span class="visually-hidden">Cargando...</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Columna del Mapa Interactivo (Derecha) -->
+                    <div class="col-lg-6 col-xl-5 order-1 order-lg-2">
+                        <div class="map-sticky-container shadow">
+                            <div class="map-header d-flex justify-content-between align-items-center p-3">
+                                <h3 class="m-0 h5"><i class="fas fa-map-marked-alt text-primary me-2"></i>Ubicación Geográfica</h3>
+                                <button id="btn-center-map" class="btn btn-sm btn-outline-primary" title="Restaurar vista inicial del mapa">
+                                    <i class="fas fa-compress-arrows-alt"></i> Centrar
+                                </button>
+                            </div>
+                            <div id="map" class="map-frame"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <!-- Sección de Logo -->
+            <a class="footer-section logo-section">
+                <img src="./img/logo - vertical.png" alt="Logo Ministerio" class="footer-logo">
+            </a>  
+            <!-- Sección de Contacto -->
+            <div class="footer-section contact-section">
+                <h2 class="footer-heading">CONTACTO</h2>
+                <ul class="contact-list">
+                    <li class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Av. Báez Osorio Leopoldo Navarro, Santo Domingo
+                    </li>
+                    <li class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        (809) 792-6183
+                    </li>
+                    <li class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        educacionadrd@gmail.com
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Línea divisoria -->
+            <div class="footer-divider"></div>
+
+            <!-- Sección Redes Sociales -->
+            <div class="footer-section social-section">
+                <h2 class="footer-heading">SÍGUENOS</h2>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/educacionadrd?igsh=cm1ucXV3czN0aHY3" class="social-icon" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@EDUCACIONADRD" class="social-icon" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://open.spotify.com/episode/2ywMb45l1HWVa13kTzxzA9?si=7ni3a-VCQXW1KiCeNUGvEg" class="social-icon" target="_blank">
+                        <i class="fab fa-spotify"></i>
+                    </a>
+                    <a href="https://whatsapp.com/channel/0029Vb677MK8vd1YRM9qdo0R" class="social-icon" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Sección Derechos -->
+            <div class="footer-section copyright-section">
+                <p class="copyright-text">
+                    © 2026 Ministerio de Educación A.D<br>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <!-- Script de lógica -->
+    <script type="module" src="./js/Institutos.js"></script>
+</body>
+</html>
