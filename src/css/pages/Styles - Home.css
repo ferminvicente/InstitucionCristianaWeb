@@ -1,12 +1,9 @@
-﻿/* === SLIDER === */
+/* === SLIDER === */
 .photo-slider {
     position: relative;
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto 40px;
+    margin: 0 0 40px;
     overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 4px 25px rgba(0,0,0,0.25);
     background-color: #0F3968;
 }
 
@@ -36,6 +33,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover; /* Para web - llena el espacio */
+        object-position: center 20%; /* Alineación óptima (20%) para centrar rostros sin recortar en exceso la base */
         display: block;
     }
 
@@ -110,10 +108,10 @@
 
 .estadistica-texto {
     color: #0F3968;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin: 0;
-    font-family: 'Garet', Arial, sans-serif;
-    font-weight: 600;
+    font-family: Arial, sans-serif;
+    font-weight: 500;
 }
 
 .mision-vision-home {
@@ -154,11 +152,11 @@
 
     .card-mision p,
     .card-vision p {
-        font-size: 1.2rem;
+        font-size: 1.15rem;
         line-height: 1.7;
         margin: 0;
         color: #ffffff;
-        font-family: 'Garet', Arial, sans-serif;
+        font-family: Arial, sans-serif;
         font-weight: 400;
     }
 
@@ -257,9 +255,9 @@
     color: #6c757d;
     line-height: 1.7;
     margin: 0;
-    font-family: 'Garet', Arial, sans-serif;
+    font-family: Arial, sans-serif;
     font-weight: 400;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .compromiso-home {
@@ -278,9 +276,9 @@
 .item-compromiso {
     padding: 1.2rem 0;
     border-bottom: 2px solid #e9ecef;
-    font-size: 1.3rem;
+    font-size: 1.15rem;
     color: #0F3968;
-    font-family: 'Garet', Arial, sans-serif;
+    font-family: Arial, sans-serif;
     font-weight: 500;
     position: relative;
     padding-left: 3rem;

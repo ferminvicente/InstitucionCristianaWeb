@@ -24,4 +24,19 @@ document.addEventListener('DOMContentLoaded', () => {
             behavior: 'smooth'
         });
     });
+
+    // --- Tarjetas Clickables Globales (UX 2026) ---
+    document.querySelectorAll('.clickable-card').forEach(card => {
+        card.style.cursor = 'pointer';
+        card.addEventListener('click', (e) => {
+            // No redirigir si se hace clic en botones, enlaces o elementos interactivos nativos
+            if (e.target.closest('a') || e.target.closest('button') || e.target.closest('select') || e.target.closest('input')) {
+                return;
+            }
+            const href = card.getAttribute('data-href');
+            if (href) {
+                window.location.href = href;
+            }
+        });
+    });
 });

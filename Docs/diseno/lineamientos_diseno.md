@@ -65,3 +65,13 @@ Para asegurar que todo el contenido del sitio parezca parte de la misma familia,
 ## 5. Pautas de Accesibilidad (a11y)
 * **Contraste:** Todo texto sobre fondos oscuros (como banners y la tarjeta de director) debe ser blanco puro (`#ffffff`) o blanco translúcido (`rgba(255,255,255,0.9)`). Nunca heredar colores oscuros sobre fondos oscuros.
 * **Enlaces de Teléfono y Correo:** Deben destacar visualmente y ser fácilmente clickeables en dispositivos táctiles.
+
+---
+
+## 6. Pulido Estético Avanzado (UI/UX 2026)
+* **Balance de Pesos Tipográficos:** Evitar la aplicación de la fuente de títulos `Garet` (que es negrita por defecto en su archivo woff2) en párrafos largos o textos descriptivos secundarios. Estos textos deben usar `Arial` o `sans-serif` con peso `regular` (`font-weight: 400` o `500`) para no sobrecargar el diseño visual y permitir que los títulos destaquen.
+* **Pie de Página (Footer):** Debe usar un fondo azul sólido `#0F3968` o su degradado oficial y tipografías blancas (`#ffffff` / `#f8f9fa`) de alto contraste. Se prohíbe el uso de `text-shadow` que ensucie el texto.
+* **Interactividad Responsable en Tarjetas:** Si una tarjeta responde visualmente al cursor (hover), a nivel de experiencia de usuario (UX) significa que es un elemento interactivo. Por lo tanto, toda la tarjeta debe ser clickeable (`.clickable-card`), redirigiendo a la acción principal del elemento.
+* **Unboxing de Contenidos Únicos:** En páginas donde existe una única sección de contenido relevante (ej. Biblioteca, Organigrama), evitar encerrar la información en tarjetas blancas con bordes y sombras artificiales. Permitir que el contenido respire libremente en la cuadrícula de la página.
+* **Continuidad de Botones en Grillas:** Para evitar desalineaciones en tarjetas de una grilla debido a variaciones en la longitud del texto descriptivo superior, los botones deben alinearse de forma consistente en la parte inferior en bloque continuo, extendiéndose al ancho completo o centrados simétricamente.
+

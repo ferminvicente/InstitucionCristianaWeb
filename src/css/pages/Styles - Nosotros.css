@@ -1,14 +1,10 @@
 /* ========== ESTILOS NOSOTROS - GRADIENTE CONSISTENTE ========== */
 
 /* Contenedor Principal */
-.organigrama-container {
-    max-width: 1300px;
+.organigrama-section {
     margin: 4rem auto;
     padding: 30px 20px;
     position: relative;
-    background: #ffffff;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 /* Cabecera - MISMO GRADIENTE QUE LAS DEMÁS PÁGINAS */
@@ -87,7 +83,7 @@
 
 .tarjeta-direccion {
     background: white;
-    padding: 1.5rem;
+    padding: 2.2rem 2rem;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     width: 100%;
@@ -106,16 +102,19 @@
     height: 140px;
     border-radius: 50%;
     border: 3px solid #E64F22;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     object-fit: cover;
 }
 
 .programas {
     background: #f8fafb;
-    padding: 1rem;
+    padding: 1.25rem;
     border-radius: 10px;
-    margin-top: 1rem;
+    margin-top: 1.25rem;
     width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0.5rem 1.5rem;
 }
 
     .programas p {
@@ -152,7 +151,7 @@
     .info-cargo h3,
     .info-cargo h4 {
         color: #2D3255; /* Mismo color azul principal */
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.75rem;
         font-weight: 700;
     }
 
@@ -193,7 +192,7 @@
 }
 
 @media (max-width: 768px) {
-    .organigrama-container {
+    .organigrama-section {
         margin: 2rem auto;
         padding: 20px 15px;
     }
