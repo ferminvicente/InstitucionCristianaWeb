@@ -55,14 +55,15 @@
     white-space: nowrap;
 }
 
-/* Para móvil - contain para ver imagen completa */
+/* Para móvil - cover para consistencia visual */
 @media (max-width: 768px) {
     .slider-container {
-        height: 350px;
+        height: 300px; /* Altura responsiva balanceada */
     }
 
     .slide-item img {
-        object-fit: contain; /* Para móvil - imagen completa */
+        object-fit: cover; /* Llena el espacio de forma premium sin dejar franjas vacías */
+        object-position: center 20%; /* Alineación consistente para centrar los rostros */
     }
 
     .slider-title {
@@ -74,11 +75,11 @@
 
 @media (max-width: 576px) {
     .slider-container {
-        height: 280px;
+        height: 240px; /* Más compacto en pantallas muy pequeñas */
     }
 
     .slider-title {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         padding: 8px 16px;
         bottom: 15px;
     }
