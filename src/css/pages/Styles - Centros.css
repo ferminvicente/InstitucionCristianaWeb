@@ -78,6 +78,7 @@
     box-shadow: 0 0 0 0.2rem rgba(15, 57, 104, 0.25);
 }
 
+#provincia-select,
 #distrito-select {
     border-radius: 8px;
     height: 45px;
@@ -85,6 +86,7 @@
     border: 1px solid #ced4da;
 }
 
+#provincia-select:focus,
 #distrito-select:focus {
     border-color: #0F3968;
     box-shadow: 0 0 0 0.2rem rgba(15, 57, 104, 0.25);
@@ -176,6 +178,24 @@
     margin-bottom: 0.4rem;
 }
 
+.card-tags {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.provincia-tag {
+    display: inline-block;
+    background: rgba(230, 79, 34, 0.08);
+    color: #E64F22;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.2rem 0.6rem;
+    border-radius: 6px;
+    text-transform: uppercase;
+}
+
 .distrito-tag {
     display: inline-block;
     background: rgba(15, 57, 104, 0.08);
@@ -184,7 +204,6 @@
     font-weight: 600;
     padding: 0.2rem 0.6rem;
     border-radius: 6px;
-    margin-bottom: 0.8rem;
     text-transform: uppercase;
 }
 

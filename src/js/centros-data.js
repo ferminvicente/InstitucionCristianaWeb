@@ -9,19 +9,23 @@ export const sedesCentros = [
         distrito: "",
         matricula: "",
         aulas: "",
-        ubicacion: "https://share.google/cBmOiyFtp0QPnWXHs"
+        ubicacion: "https://share.google/cBmOiyFtp0QPnWXHs",
+        provincia: "Santo Domingo",
+        coords: [18.4728, -69.9822]
     },
     {
         id: 2,
         nombre: "Colegio E. Emanuel",
         telefono: "(809) 545-2233",
-        direccion: "Duarte 210, Sávica, Los Alcarrizos, SD",
+        direccion: "Duarte 210, Sávica,Los Alcarrizos, SD",
         director: "Arelis Morel",
         codigo: "1168316",
         distrito: "1501",
         matricula: "",
         aulas: "",
-        ubicacion: "https://maps.google.com/?q=18.519445,-69.844894"
+        ubicacion: "https://maps.google.com/?q=18.519445,-69.844894",
+        provincia: "Santo Domingo",
+        coords: [18.519445, -69.844894]
     },
     {
         id: 3,
@@ -33,7 +37,9 @@ export const sedesCentros = [
         distrito: "1501",
         matricula: "",
         aulas: "",
-        ubicacion: "https://maps.app.goo.gl/B6VaSRUKGjYDwDvd9?g_st=iw"
+        ubicacion: "https://maps.app.goo.gl/B6VaSRUKGjYDwDvd9?g_st=iw",
+        provincia: "Santo Domingo",
+        coords: [18.515, -70.015]
     },
     {
         id: 4,
@@ -45,19 +51,23 @@ export const sedesCentros = [
         distrito: "1501",
         matricula: "",
         aulas: "",
-        ubicacion: "https://share.google/JU82OW7N6pmIN9rFi"
+        ubicacion: "https://share.google/JU82OW7N6pmIN9rFi",
+        provincia: "Santo Domingo",
+        coords: [18.517, -70.016]
     },
     {
         id: 5,
         nombre: "Centro de Estudio Fuente de Luz",
-        telefono: "(809) 483-0147",
+        telefono: "(809) 483- 0147",
         direccion: "Calle Central No. 77, Urb. Lucerna, SD",
         director: "Margarita de Parra",
         codigo: "32008710",
         distrito: "1505",
         matricula: "130",
         aulas: "11",
-        ubicacion: "https://share.google/wuR3X3wYj2niiwIIM"
+        ubicacion: "https://share.google/wuR3X3wYj2niiwIIM",
+        provincia: "Santo Domingo",
+        coords: [18.502, -69.835]
     },
     {
         id: 6,
@@ -69,7 +79,9 @@ export const sedesCentros = [
         distrito: "1505",
         matricula: "998",
         aulas: "19",
-        ubicacion: "https://share.google/pp3CqC5tu3aWaGMgu"
+        ubicacion: "https://share.google/pp3CqC5tu3aWaGMgu",
+        provincia: "Santo Domingo",
+        coords: [18.475, -69.985]
     },
     {
         id: 7,
@@ -81,67 +93,79 @@ export const sedesCentros = [
         distrito: "1503",
         matricula: "259",
         aulas: "14",
-        ubicacion: "https://share.google/CIpYWMKl54ycNZ3Wv"
+        ubicacion: "https://share.google/CIpYWMKl54ycNZ3Wv",
+        provincia: "Distrito Nacional",
+        coords: [18.472, -69.94]
     },
     {
         id: 8,
         nombre: "Colegio Adonai",
         telefono: "(809) 239-0939",
-        direccion: "Anacaona No.52, Centro Guaricamo, SD",
+        direccion: "Anacaona No.52,Centro Guaricamo, SD",
         director: "Tomasina Rodríguez S",
         codigo: "1157711",
         distrito: "1001",
         matricula: "389",
         aulas: "16",
-        ubicacion: "https://share.google/FmftpuKn3wfn57mRU"
+        ubicacion: "https://share.google/FmftpuKn3wfn57mRU",
+        provincia: "Santo Domingo",
+        coords: [18.56, -69.912]
     },
     {
         id: 9,
-        nombre: "Colegio 5 Panes y 2 Peces",
+        nombre: "Colegio 5 panes y 2 peces",
         telefono: "(809) 222-1648",
-        direccion: "C. Duarte No.26, Esq. G. Luperon, S Isidro, SD",
+        direccion: "C. Duarte No.26,Esq. G.Luperon, S Isidro, SD",
         director: "Ramón Reynoso Almonte",
         codigo: "32031615",
         distrito: "1003",
         matricula: "417",
         aulas: "12 / 2 t.",
-        ubicacion: "https://share.google/Pcuykpmw0M1Zi4idR"
+        ubicacion: "https://share.google/Pcuykpmw0M1Zi4idR",
+        provincia: "Santo Domingo",
+        coords: [18.514, -69.774]
     },
     {
         id: 10,
         nombre: "Colegio Cristiano Riobisa",
         telefono: "(809) 569-6982",
-        direccion: "C. Principal No. 12, El Edén, Villa Mella, SD",
+        direccion: "C.Principal No. 12,El Edén,Villa Mella, SD",
         director: "Crecencia Morel",
         codigo: "3012410",
         distrito: "1001",
         matricula: "271",
         aulas: "20",
-        ubicacion: "https://share.google/Jv26mF2WBP6guEaaf"
+        ubicacion: "https://share.google/Jv26mF2WBP6guEaaf",
+        provincia: "Santo Domingo",
+        coords: [18.544, -69.904]
     },
     {
         id: 11,
-        nombre: "Colegio Los Olivitos (N. Renacer)",
+        nombre: "Colegio Los Olivitos(N. Renacer)",
         telefono: "(849) 295-5847",
-        direccion: "Nicolás Brazoban 12, Casa Vieja, Villa Mella, SD",
+        direccion: "Nicolás Brazoban 12, Casa Vieja,Villa Mella, SD",
         director: "María García Valdez",
         codigo: "11707",
         distrito: "1001",
         matricula: "100",
         aulas: "7",
-        ubicacion: "https://share.google/P978gZ3bxAdaP7lkq"
+        ubicacion: "https://share.google/P978gZ3bxAdaP7lkq",
+        provincia: "Santo Domingo",
+        coords: [18.546, -69.906]
     },
     {
         id: 12,
         nombre: "Colegio Mi Esperanza",
         telefono: "(809) 239-5908",
-        direccion: "H. Mirabal No 4, B. Enriquillo, Sab. Perdida, SD",
+        direccion: "H.Mirabal No 4, B. Enriquillo, Sab. Perdida, SD",
         director: "Elizabeth Ramirez",
         codigo: "9688",
         distrito: "1008",
         matricula: "117",
         aulas: "10",
-        ubicacion: "https://share.google/Nd2pRFm54JDKU4Abr"
+        ubicacion: "https://share.google/Nd2pRFm54JDKU4Abr",
+        provincia: "Santo Domingo",
+        coords: [18.529, -69.873]
     },
     {
         id: 13,
@@ -153,7 +177,9 @@ export const sedesCentros = [
         distrito: "406",
         matricula: "",
         aulas: "",
-        ubicacion: "https://share.google/FJA2BAyn8D6rPkYLB"
+        ubicacion: "https://share.google/FJA2BAyn8D6rPkYLB",
+        provincia: "San Cristóbal",
+        coords: [18.419, -70.035]
     },
     {
         id: 14,
@@ -165,7 +191,9 @@ export const sedesCentros = [
         distrito: "404",
         matricula: "",
         aulas: "",
-        ubicacion: "https://share.google/YShVQ0rnw3x79fvfk"
+        ubicacion: "https://share.google/YShVQ0rnw3x79fvfk",
+        provincia: "San Cristóbal",
+        coords: [18.775, -70.165]
     },
     {
         id: 15,
@@ -177,7 +205,9 @@ export const sedesCentros = [
         distrito: "304",
         matricula: "",
         aulas: "",
-        ubicacion: "https://share.google/MyQws17rPamdPJZia"
+        ubicacion: "https://share.google/MyQws17rPamdPJZia",
+        provincia: "Peravia",
+        coords: [18.279, -70.332]
     },
     {
         id: 16,
@@ -188,32 +218,38 @@ export const sedesCentros = [
         codigo: "13249",
         distrito: "304",
         matricula: "125",
-        aulas: "3 2t.",
-        ubicacion: "https://share.google/50M2meBArNBHtF19W"
+        aulas: "3    2t.",
+        ubicacion: "https://share.google/50M2meBArNBHtF19W",
+        provincia: "Peravia",
+        coords: [18.281, -70.334]
     },
     {
         id: 17,
         nombre: "Colegio E. Sinaí",
         telefono: "(809) 556-4874",
-        direccion: "Santa Rosa Esq. Eugenio A. Miranda, La Romana",
+        direccion: "Santa Rosa Esq.Eugenio A.Miranda, La Romana",
         director: "Amancia Gabriel",
         codigo: "7005",
         distrito: "503",
         matricula: "825",
         aulas: "32",
-        ubicacion: "https://share.google/rEEkADruKpu5LVMWo"
+        ubicacion: "https://share.google/rEEkADruKpu5LVMWo",
+        provincia: "La Romana",
+        coords: [18.427, -68.973]
     },
     {
         id: 18,
         nombre: "Colegio Piedra del Angulo",
         telefono: "(809) 223-1534",
-        direccion: "C.17 No. 20, Pica Piedra, V. Hermosa, La Romana",
+        direccion: "C.17 No. 20, Pica Piedra, V. Hermosa La Romana",
         director: "Dilenia Félix",
         codigo: "",
         distrito: "",
         matricula: "",
         aulas: "",
-        ubicacion: "https://share.google/50M2meBArNBHtF19W"
+        ubicacion: "https://share.google/50M2meBArNBHtF19W",
+        provincia: "La Romana",
+        coords: [18.435, -68.985]
     },
     {
         id: 19,
@@ -225,7 +261,9 @@ export const sedesCentros = [
         distrito: "",
         matricula: "",
         aulas: "",
-        ubicacion: "https://maps.app.goo.gl/2xtEmc455SkbMWVF6?g_st=aw"
+        ubicacion: "https://maps.app.goo.gl/2xtEmc455SkbMWVF6?g_st=aw",
+        provincia: "Santiago",
+        coords: [19.452, -70.697]
     },
     {
         id: 20,
@@ -237,11 +275,13 @@ export const sedesCentros = [
         distrito: "805",
         matricula: "",
         aulas: "",
-        ubicacion: "https://share.google/SIZKENnkXWqtLGbqO"
+        ubicacion: "https://share.google/SIZKENnkXWqtLGbqO",
+        provincia: "Santiago",
+        coords: [19.455, -70.699]
     },
     {
         id: 21,
-        nombre: "Colegio Cristiano La Vega",
+        nombre: "Colegio Cristiana la Vega",
         telefono: "(809) 573-3033",
         direccion: "Calle Joaquin Gomez, La Vega",
         director: "Adalgisa Santana",
@@ -249,19 +289,23 @@ export const sedesCentros = [
         distrito: "604",
         matricula: "301",
         aulas: "21",
-        ubicacion: "https://share.google/MXGs2clhuWMyZMYSi"
+        ubicacion: "https://share.google/MXGs2clhuWMyZMYSi",
+        provincia: "La Vega",
+        coords: [19.22, -70.53]
     },
     {
         id: 22,
         nombre: "Colegio E. Bethel",
-        telefono: "(809) 586-5273",
+        telefono: "(809) 586- 5273",
         direccion: "Calle Villanueva No. 65, Puerto Plata",
         director: "Hilda Belliard",
         codigo: "",
         distrito: "",
         matricula: "",
         aulas: "",
-        ubicacion: "https://share.google/qPkAc8Dql3torSf3n"
+        ubicacion: "https://share.google/qPkAc8Dql3torSf3n",
+        provincia: "Puerto Plata",
+        coords: [19.793, -70.688]
     },
     {
         id: 23,
@@ -273,7 +317,9 @@ export const sedesCentros = [
         distrito: "",
         matricula: "",
         aulas: "",
-        ubicacion: "https://share.google/qPkAc8Dql3torSf3n"
+        ubicacion: "https://share.google/qPkAc8Dql3torSf3n",
+        provincia: "Duarte",
+        coords: [19.184, -69.872]
     },
     {
         id: 24,
@@ -285,43 +331,51 @@ export const sedesCentros = [
         distrito: "501",
         matricula: "",
         aulas: "",
-        ubicacion: "https://share.google/MXoggmFMJNqmXIC2a"
+        ubicacion: "https://share.google/MXoggmFMJNqmXIC2a",
+        provincia: "San Pedro de Macorís",
+        coords: [18.452, -69.3]
     },
     {
         id: 25,
         nombre: "Colegio E. Alfaro",
         telefono: "(809) 354-3354",
-        direccion: "Calle Jazmín No. 19, Las Flores, San Cristobal",
+        direccion: "Calle Jazmín ·19, Las Flores, San Cristobal",
         director: "María Mercedes de la Cruz",
         codigo: "",
         distrito: "",
         matricula: "",
         aulas: "",
-        ubicacion: "https://share.google/g32aoE3RR3w6wVTt0"
+        ubicacion: "https://share.google/g32aoE3RR3w6wVTt0",
+        provincia: "San Cristóbal",
+        coords: [18.416, -70.108]
     },
     {
         id: 26,
         nombre: "Colegio E. Esmirna",
         telefono: "(809) 524-0292",
-        direccion: "Pedernales",
+        direccion: "PEDERNALES",
         director: "Sonia Ramírez",
         codigo: "87428",
         distrito: "101",
         matricula: "",
         aulas: "",
-        ubicacion: "https://share.google/C0AxkYJbFLcao0Gcc"
+        ubicacion: "https://share.google/C0AxkYJbFLcao0Gcc",
+        provincia: "Pedernales",
+        coords: [18.038, -71.744]
     },
     {
         id: 27,
         nombre: "Colegio Shadai",
         telefono: "(809) 399-1886",
-        direccion: "Sabaneta de San Juan",
+        direccion: "Dirección Sabaneta de San Juan",
         director: "Ruth I. Tavera",
         codigo: "",
         distrito: "",
         matricula: "",
         aulas: "",
-        ubicacion: "https://share.google/aimode/x34VFSTPFA2n6sjML"
+        ubicacion: "https://share.google/aimode/x34VFSTPFA2n6sjML",
+        provincia: "San Juan",
+        coords: [18.81, -71.229]
     },
     {
         id: 28,
@@ -333,11 +387,13 @@ export const sedesCentros = [
         distrito: "",
         matricula: "",
         aulas: "",
-        ubicacion: "https://share.google/Jo4mVXhOrX91XIvPv"
+        ubicacion: "https://share.google/Jo4mVXhOrX91XIvPv",
+        provincia: "Espaillat",
+        coords: [19.394, -70.526]
     },
     {
         id: 29,
-        nombre: "Colegio E. Siloé",
+        nombre: "Colegio E. Siloė",
         telefono: "(809) 578-0872",
         direccion: "Las Matas de Farfan",
         director: "Fernely Aquino",
@@ -345,7 +401,9 @@ export const sedesCentros = [
         distrito: "",
         matricula: "",
         aulas: "",
-        ubicacion: "https://share.google/WusXCpSKJU9CpZC6t"
+        ubicacion: "https://share.google/WusXCpSKJU9CpZC6t",
+        provincia: "San Juan",
+        coords: [18.772, -71.517]
     },
     {
         id: 30,
@@ -357,7 +415,9 @@ export const sedesCentros = [
         distrito: "1201",
         matricula: "400",
         aulas: "11",
-        ubicacion: "https://share.google/O53fyL8Bsw8yAsebq"
+        ubicacion: "https://share.google/O53fyL8Bsw8yAsebq",
+        provincia: "La Altagracia",
+        coords: [18.615, -68.704]
     },
     {
         id: 31,
@@ -369,11 +429,13 @@ export const sedesCentros = [
         distrito: "1201",
         matricula: "242",
         aulas: "10",
-        ubicacion: "https://share.google/XQhVzsT1pNybHkTTu"
+        ubicacion: "https://share.google/XQhVzsT1pNybHkTTu",
+        provincia: "La Altagracia",
+        coords: [18.625, -68.65]
     },
     {
         id: 32,
-        nombre: "Colegio E. Socorro de lo Alto",
+        nombre: "Colegio E. Socrro de lo Alto",
         telefono: "(809) 388-6405",
         direccion: "Manzana A No.1, Catanga Los Mina",
         director: "Rosafina Perez",
@@ -381,7 +443,9 @@ export const sedesCentros = [
         distrito: "",
         matricula: "",
         aulas: "",
-        ubicacion: "https://share.google/Pxmouu8vtP4JRy275"
+        ubicacion: "https://share.google/Pxmouu8vtP4JRy275",
+        provincia: "Santo Domingo",
+        coords: [18.497, -69.851]
     },
     {
         id: 33,
@@ -393,19 +457,23 @@ export const sedesCentros = [
         distrito: "",
         matricula: "",
         aulas: "",
-        ubicacion: "https://share.google/GLRoSEakEA4c1MqjN"
+        ubicacion: "https://share.google/GLRoSEakEA4c1MqjN",
+        provincia: "San Cristóbal",
+        coords: [18.78, -70.17]
     },
     {
         id: 34,
         nombre: "Comunidad Infantil de Desarrollo Integral",
         telefono: "(809) 764-4030",
-        direccion: "Calle Salome Ureña No. 10, La Esperanza, Sto Dgo Norte",
-        director: "Rafaela Martinez",
+        direccion: "Calle Salome Ureña No. 10, La Espernza, Sto Dgo Norte",
+        director: "Pastora= Rafaela Martinez",
         codigo: "",
         distrito: "",
         matricula: "",
         aulas: "",
-        ubicacion: "https://share.google/4t4F2sqjV1TRjryfd"
+        ubicacion: "https://share.google/4t4F2sqjV1TRjryfd",
+        provincia: "Santo Domingo",
+        coords: [18.535, -69.88]
     },
     {
         id: 35,
@@ -417,7 +485,9 @@ export const sedesCentros = [
         distrito: "",
         matricula: "",
         aulas: "",
-        ubicacion: "https://share.google/A2HSuhx77OVVuFaN4"
+        ubicacion: "https://share.google/A2HSuhx77OVVuFaN4",
+        provincia: "Elías Piña",
+        coords: [18.879, -71.703]
     },
     {
         id: 36,
@@ -429,7 +499,9 @@ export const sedesCentros = [
         distrito: "",
         matricula: "",
         aulas: "",
-        ubicacion: "https://share.google/cDxRXuqtlFDP9qsR3"
+        ubicacion: "https://share.google/cDxRXuqtlFDP9qsR3",
+        provincia: "Santo Domingo",
+        coords: [18.484, -69.991]
     },
     {
         id: 37,
@@ -441,7 +513,9 @@ export const sedesCentros = [
         distrito: "",
         matricula: "",
         aulas: "",
-        ubicacion: "https://share.google/MrF4B00NF8YUBBw4i"
+        ubicacion: "https://share.google/MrF4B00NF8YUBBw4i",
+        provincia: "Distrito Nacional",
+        coords: [18.487, -69.947]
     },
     {
         id: 38,
@@ -453,6 +527,8 @@ export const sedesCentros = [
         distrito: "",
         matricula: "",
         aulas: "",
-        ubicacion: "https://share.google/bjXJiIjkAmNhMTj8M"
+        ubicacion: "https://share.google/bjXJiIjkAmNhMTj8M",
+        provincia: "Santo Domingo",
+        coords: [18.489, -69.821]
     }
 ];

@@ -53,7 +53,7 @@
                         <a class="nav-link" href="./institutos.html">Institutos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="./centros.html">Centros Educativos</a>
+                        <a class="nav-link active" href="./centros.html">Colegios</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./biblioteca.html">Biblioteca</a>
@@ -88,7 +88,7 @@
                             <div class="filters-panel p-3 mb-4 shadow-sm">
                                 <div class="row g-3">
                                     <!-- Buscador de texto -->
-                                    <div class="col-md-7">
+                                    <div class="col-md-6">
                                         <div class="search-box position-relative">
                                             <i class="fas fa-search search-icon"></i>
                                             <input type="text" id="search-input" class="form-control"
@@ -96,8 +96,16 @@
                                         </div>
                                     </div>
 
+                                    <!-- Selector de provincias -->
+                                    <div class="col-md-3">
+                                        <select id="provincia-select" class="form-select">
+                                            <option value="">Todas las Provincias</option>
+                                            <!-- Las opciones se generarán dinámicamente -->
+                                        </select>
+                                    </div>
+
                                     <!-- Selector de distritos -->
-                                    <div class="col-md-5">
+                                    <div class="col-md-3">
                                         <select id="distrito-select" class="form-select">
                                             <option value="">Todos los Distritos</option>
                                             <!-- Las opciones se generarán dinámicamente -->

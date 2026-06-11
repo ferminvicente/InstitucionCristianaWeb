@@ -7,6 +7,7 @@ class CentrosManager {
 
         // Elementos del DOM
         this.searchInput = document.getElementById('search-input');
+        this.provinciaSelect = document.getElementById('provincia-select');
         this.distritoSelect = document.getElementById('distrito-select');
         this.resultsCountText = document.getElementById('results-count-text');
         this.resetFiltersBtn = document.getElementById('btn-reset-filters');
@@ -18,6 +19,7 @@ class CentrosManager {
 
     init() {
         this.initMap();
+        this.populateProvincias();
         this.populateDistritos();
         this.renderList(sedesCentros);
         this.renderMarkers(sedesCentros);
@@ -26,6 +28,20 @@ class CentrosManager {
         // Remover loader
         const loader = document.getElementById('loader');
         if (loader) loader.remove();
+    }
+
+    populateProvincias() {
+        // Extraer provincias únicas y ordenar alfabéticamente
+        const provincias = [...new Set(sedesCentros.map(s => s.provincia))]
+            .filter(p => p && p.trim() !== '')
+            .sort((a, b) => a.localeCompare(b));
+
+        provincias.forEach(prov => {
+            const option = document.createElement('option');
+            option.value = prov;
+            option.textContent = prov;
+            this.provinciaSelect.appendChild(option);
+        });
     }
 
     initMap() {
@@ -102,8 +118,15 @@ class CentrosManager {
                 : '';
 
             card.innerHTML = `
-                <div class="distrito-tag">${centro.distrito ? `Distrito ${centro.distrito}` : 'Sin distrito'}</div>
+                <div class="card-tags">
+                    <span class="provincia-tag">${centro.provincia}</span>
+                    <span class="distrito-tag">${centro.distrito ? `Distrito ${centro.distrito}` : 'Sin distrito'}</span>
+                </div>
                 <h3>${centro.nombre}</h3>
+                <div class="info-line">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span><strong>Tipo:</strong> Centro Educativo</span>
+                </div>
                 <div class="info-line">
                     <i class="fas fa-map-marker-alt"></i>
                     <span><strong>Dirección:</strong> ${centro.direccion}</span>
@@ -207,6 +230,7 @@ class CentrosManager {
     setupEventListeners() {
         // Escuchar cambios de inputs
         this.searchInput.addEventListener('input', () => this.handleFilters());
+        this.provinciaSelect.addEventListener('change', () => this.handleFilters());
         this.distritoSelect.addEventListener('change', () => this.handleFilters());
 
         // Centrar mapa
@@ -217,6 +241,7 @@ class CentrosManager {
         // Limpiar filtros
         this.resetFiltersBtn.addEventListener('click', () => {
             this.searchInput.value = '';
+            this.provinciaSelect.value = '';
             this.distritoSelect.value = '';
             this.handleFilters();
         });
@@ -224,6 +249,7 @@ class CentrosManager {
 
     handleFilters() {
         const query = this.searchInput.value.toLowerCase().trim();
+        const selectedProvincia = this.provinciaSelect.value;
         const selectedDistrito = this.distritoSelect.value;
 
         // Filtrar datos
@@ -234,12 +260,16 @@ class CentrosManager {
                 centro.direccion.toLowerCase().includes(query) ||
                 (centro.director && centro.director.toLowerCase().includes(query)) ||
                 (centro.distrito && centro.distrito.includes(query)) ||
+                (centro.provincia && centro.provincia.toLowerCase().includes(query)) ||
                 (centro.codigo && centro.codigo.includes(query));
 
-            // 2. Filtro de Distrito
+            // 2. Filtro de Provincia
+            const matchesProvincia = !selectedProvincia || centro.provincia === selectedProvincia;
+
+            // 3. Filtro de Distrito
             const matchesDistrito = !selectedDistrito || centro.distrito === selectedDistrito;
 
-            return matchesQuery && matchesDistrito;
+            return matchesQuery && matchesProvincia && matchesDistrito;
         });
 
         // Actualizar vistas
@@ -254,7 +284,7 @@ class CentrosManager {
         }
 
         // Mostrar u ocultar botón de limpiar filtros
-        const hasActiveFilters = query !== '' || selectedDistrito !== '';
+        const hasActiveFilters = query !== '' || selectedProvincia !== '' || selectedDistrito !== '';
         if (hasActiveFilters) {
             this.resetFiltersBtn.classList.remove('d-none');
         } else {
