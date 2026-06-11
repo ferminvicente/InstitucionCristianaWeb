@@ -9,12 +9,12 @@
     font-family: 'Garet', Arial, sans-serif;
 }
 
-    .programas-hero h1 {
-        font-size: 3.5rem;
-        margin-bottom: 1rem;
-        font-weight: 700;
-        color: white;
-    }
+.programas-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: white;
+}
 
 .hero-subtitle {
     font-size: 1.5rem;
@@ -63,12 +63,12 @@
     letter-spacing: 0.5px;
 }
 
-    .filtro-btn:hover,
-    .filtro-btn.active {
-        background: #2D3255;
-        color: white;
-        transform: translateY(-2px);
-    }
+.filtro-btn:hover,
+.filtro-btn.active {
+    background: #2D3255;
+    color: white;
+    transform: translateY(-2px);
+}
 
 /* Grid de Programas */
 .programas-grid {
@@ -82,7 +82,7 @@
 .programa-card {
     background: white;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: all 0.4s ease;
     border: 3px solid transparent;
@@ -95,11 +95,11 @@
     cursor: pointer;
 }
 
-    .programa-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 20px 50px rgba(0,0,0,0.2);
-        border-color: #E64F22;
-    }
+.programa-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    border-color: #E64F22;
+}
 
 .programa-header {
     background: linear-gradient(45deg, #2D3255, #0F3968);
@@ -112,6 +112,19 @@
     font-size: 3rem;
     margin-bottom: 1rem;
     color: #E64F22;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.programa-logo {
+    max-width: 100%;
+    max-height: 80px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
 }
 
 .programa-header h3 {
@@ -157,19 +170,19 @@
     font-weight: 400;
 }
 
-    .programa-caracteristicas li {
-        display: flex;
-        align-items: center;
-        gap: 0.8rem;
-        margin-bottom: 0.8rem;
-        color: #4a4a4a;
-        font-size: 0.9rem;
-    }
+.programa-caracteristicas li {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 0.8rem;
+    color: #4a4a4a;
+    font-size: 0.9rem;
+}
 
-    .programa-caracteristicas i {
-        color: #E64F22;
-        width: 16px;
-    }
+.programa-caracteristicas i {
+    color: #E64F22;
+    width: 16px;
+}
 
 .programa-footer {
     padding: 1.5rem 2rem;
@@ -223,20 +236,20 @@
     color: #2D3255;
 }
 
-    .btn-info:hover {
-        background: #2D3255;
-        color: white;
-    }
+.btn-info:hover {
+    background: #2D3255;
+    color: white;
+}
 
 .btn-inscribir {
     background: #E64F22;
     color: white;
 }
 
-    .btn-inscribir:hover {
-        background: #ff6b35;
-        transform: translateY(-2px);
-    }
+.btn-inscribir:hover {
+    background: #ff6b35;
+    transform: translateY(-2px);
+}
 
 /* Sección Beneficios */
 .beneficios-programas {
@@ -259,28 +272,28 @@
     border-top: 4px solid #E64F22;
 }
 
-    .beneficio-card:hover {
-        transform: translateY(-5px);
-    }
+.beneficio-card:hover {
+    transform: translateY(-5px);
+}
 
-    .beneficio-card i {
-        font-size: 3rem;
-        color: #E64F22;
-        margin-bottom: 1rem;
-    }
+.beneficio-card i {
+    font-size: 3rem;
+    color: #E64F22;
+    margin-bottom: 1rem;
+}
 
-    .beneficio-card h4 {
-        color: #2D3255;
-        margin-bottom: 1rem;
-        font-size: 1.3rem;
-        font-weight: 700;
-    }
+.beneficio-card h4 {
+    color: #2D3255;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
 
-    .beneficio-card p {
-        color: #6c757d;
-        line-height: 1.6;
-        margin: 0;
-    }
+.beneficio-card p {
+    color: #6c757d;
+    line-height: 1.6;
+    margin: 0;
+}
 
 /* CTA Section */
 .cta-programas {
@@ -327,11 +340,11 @@
     color: #E64F22;
 }
 
-    .btn-cta-primary:hover {
-        background: #2D3255;
-        color: white;
-        transform: translateY(-2px);
-    }
+.btn-cta-primary:hover {
+    background: #2D3255;
+    color: white;
+    transform: translateY(-2px);
+}
 
 .btn-cta-secondary {
     background: transparent;
@@ -339,11 +352,11 @@
     border: 2px solid white;
 }
 
-    .btn-cta-secondary:hover {
-        background: white;
-        color: #E64F22;
-        transform: translateY(-2px);
-    }
+.btn-cta-secondary:hover {
+    background: white;
+    color: #E64F22;
+    transform: translateY(-2px);
+}
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -351,9 +364,9 @@
         padding: 60px 0;
     }
 
-        .programas-hero h1 {
-            font-size: 2.5rem;
-        }
+    .programas-hero h1 {
+        font-size: 2.5rem;
+    }
 
     .programas-grid {
         grid-template-columns: 1fr;
@@ -367,12 +380,12 @@
         text-align: center;
         gap: 0.8rem;
     }
-    
+
     .programa-precio {
         align-items: center;
         margin-bottom: 0.2rem;
     }
-    
+
     .btn-programa {
         width: 100%;
     }
