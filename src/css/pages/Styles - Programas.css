@@ -136,14 +136,15 @@
 .programa-nivel {
     background: #E64F22;
     color: white;
-    padding: 0.3rem 1rem;
+    padding: 0.4rem 1.2rem;
     border-radius: 15px;
     font-size: 0.8rem;
     font-weight: 600;
     text-transform: uppercase;
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: 1.2rem;
+    right: 1.2rem;
+    letter-spacing: 0.5px;
 }
 
 .programa-body {
